@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>AMD | 云</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="随着web应用越来越复杂，嵌入的javascript代码越来越复杂，模块化编程就变成了必须。所以就有了后来的Dojo工具包和google的Closure库支持的模块系统。还有两个非常通用的标准规范，CommomJS和AMD。CommomJS规范的API是同步加载模块的，而实现AMD规范的API则是异步加载模块。所以理论上说，AMD规范的非阻塞加载更加适合浏览器端。而RequeireJS就是AMD规">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AMD">
+<meta property="og:url" content="http://yoursite.com/2020/02/24/AMD/index.html">
+<meta property="og:site_name" content="云">
+<meta property="og:description" content="随着web应用越来越复杂，嵌入的javascript代码越来越复杂，模块化编程就变成了必须。所以就有了后来的Dojo工具包和google的Closure库支持的模块系统。还有两个非常通用的标准规范，CommomJS和AMD。CommomJS规范的API是同步加载模块的，而实现AMD规范的API则是异步加载模块。所以理论上说，AMD规范的非阻塞加载更加适合浏览器端。而RequeireJS就是AMD规">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2020/02/24/AMD/1581000462260.png">
+<meta property="og:image" content="http://yoursite.com/2020/02/24/AMD/1581001006484.png">
+<meta property="og:image" content="http://yoursite.com/2020/02/24/AMD/1581001081812.png">
+<meta property="article:published_time" content="2020-02-24T08:46:13.000Z">
+<meta property="article:modified_time" content="2020-02-24T08:48:34.594Z">
+<meta property="article:author" content="Xue Yun">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/02/24/AMD/1581000462260.png">
+  
+    <link rel="alternate" href="/atom.xml" title="云" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">云</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">个人博客</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-AMD" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/24/AMD/" class="article-date">
+  <time datetime="2020-02-24T08:46:13.000Z" itemprop="datePublished">2020-02-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      AMD
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>随着web应用越来越复杂，嵌入的javascript代码越来越复杂，模块化编程就变成了必须。所以就有了后来的Dojo工具包和google的Closure库支持的模块系统。还有两个非常通用的标准规范，CommomJS和AMD。CommomJS规范的API是同步加载模块的，而实现AMD规范的API则是异步加载模块。所以理论上说，AMD规范的非阻塞加载更加适合浏览器端。而RequeireJS就是AMD规范的最好实现。在这里只讲述下AMD。</p>
+<blockquote>
+<p>RequeireJS是一个javascript模块加载器。它适合在浏览器中使用，有可以用在其他脚本环境。使用RequireJS加载模块化脚本将提高代码的加载速度和质量。</p>
+</blockquote>
+<h5 id="使用RequireJS的好处？"><a href="#使用RequireJS的好处？" class="headerlink" title="使用RequireJS的好处？"></a>使用RequireJS的好处？</h5><ul>
+<li>异步加载。我们知道，通常网站都会把script脚本放在html的最后，这样就可以避免浏览器执行js带来的页面阻塞。使用RequireJS，会在相关的js加载后执行回调函数，这个过程是异步的，所以它不会阻塞页面。</li>
+<li>按需加载。通过RequireJS，你可以在需要加载js逻辑的时候再加载对应的js模块，这样避免了在初始化网页的时候发生大量的请求和数据传输，或许对于一些人来说，某些模块可能他根本就不需要，那就显得没有必要。</li>
+<li>更加方便的模块化管理。相信你曾经一定遇到过因为script标签顺序问题而导致依赖关系发生错误，这个函数未定义，那个变量undefine之类的。通过RequireJS的机制，你能确保在所有的依赖模块都加载以后再执行相关的文件，所以可以起到依赖管理的作用。</li>
+<li>更加高效的版本管理。想一想，如果你还是用script脚本引入一个jQuery2.x的文件，然后你有100个页面都是这么引用的，那当你想换成jQuery3.x，那你就不得不去改这100个页面。但是如果你的RequireJS有在config中做jquery的path映射，那你之需要改一处就可以。</li>
+<li>当然还有一些诸如cdn加载不到js文件，可以请求本地文件等其它的优点。</li>
+</ul>
+<h5 id="用法？"><a href="#用法？" class="headerlink" title="用法？"></a>用法？</h5><p>AMD基本用法：其中require.js是而外下载引入的工具包</p>
+<p><img src="/2020/02/24/AMD/1581000462260.png" alt="1581000462260"></p>
+<p>01-基本用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;index.html</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;ie&#x3D;edge&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    </span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;..&#x2F;require.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    &#x2F;&#x2F;index.html</span><br><span class="line">    &#x2F;&#x2F;  --&gt;cart.js</span><br><span class="line">    &#x2F;&#x2F;      --&gt;cartDetail</span><br><span class="line">    &#x2F;&#x2F;  --&gt;user.js</span><br><span class="line">    &#x2F;&#x2F;      --&gt;userDetail</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;在一个单页应用中，只需要调用一次require，后面全是define</span><br><span class="line">    require([&quot;cart&quot;,&quot;user&quot;],function()&#123;</span><br><span class="line">        &#x2F;&#x2F;这里是首页模块的自己的逻辑</span><br><span class="line">        console.log(&#39;首页模块&#39;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;最终输出逻辑？</span><br><span class="line">    &#x2F;&#x2F;--&gt;首页模块最后输出</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;类似于打仗全军集合</span><br><span class="line">    &#x2F;&#x2F;--&gt;a师</span><br><span class="line">    &#x2F;&#x2F;  --&gt;1旅</span><br><span class="line">    &#x2F;&#x2F;  --&gt;2旅</span><br><span class="line">    &#x2F;&#x2F;--&gt;b师</span><br><span class="line">    &#x2F;&#x2F;--&gt;c师</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;当所有的师部都集合完毕，全军才能出发</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;cart.js</span><br><span class="line">define([&quot;cartDetail&quot;],function()&#123;</span><br><span class="line">    console.log(&#39;购物车模块&#39;);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;需要在cart模块内部调用cartDetail模块？</span><br><span class="line">    &#x2F;&#x2F;--&gt;需要cart模块内部引用cartDetail的路径</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;cartDetail.js</span><br><span class="line">define([],function()&#123;</span><br><span class="line">    console.log(&#39;购物车模块详细信息&#39;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;user.js</span><br><span class="line">define([&quot;userDetail&quot;],function()&#123;</span><br><span class="line">    console.log(&#39;用户模块&#39;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;userDetail.js</span><br><span class="line">define([],function()&#123;</span><br><span class="line">    console.log(&#39;用户详细信息模块&#39;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>02-模块返回值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;index.html</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;ie&#x3D;edge&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;button id&#x3D;&quot;user&quot;&gt;用户模块&lt;&#x2F;button&gt;</span><br><span class="line">    &lt;button id&#x3D;&quot;product&quot;&gt;商品模块&lt;&#x2F;button&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;..&#x2F;require.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    &#x2F;&#x2F;给回调函数添加形参，接收前面对应模块的返回值，模块返回什么，形参的值就是什么</span><br><span class="line">    &#x2F;&#x2F;形参的顺序，必须和前面调用模块的顺序保持一致</span><br><span class="line">    require([&quot;user&quot;,&quot;product&quot;],function(user,product)&#123;</span><br><span class="line">        &#x2F;&#x2F;实现用户点击了按钮，出现用户模块的逻辑</span><br><span class="line">        &#x2F;&#x2F;--&gt;需要改造user模块，把它改成&#39;按需加载&#39;的加载</span><br><span class="line"></span><br><span class="line">        var btnUser&#x3D;document.getElementById(&quot;user&quot;);</span><br><span class="line">        btnUser.onclick&#x3D;function()&#123;</span><br><span class="line">            &#x2F;&#x2F;调用用户模块逻辑</span><br><span class="line">            user();</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        var btnProduct&#x3D;document.getElementById(&quot;product&quot;);</span><br><span class="line">        btnProduct.onclick&#x3D;function()&#123;</span><br><span class="line">            &#x2F;&#x2F;执行商品模块的逻辑</span><br><span class="line">            product.init();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;user.js</span><br><span class="line">define([],function()&#123;</span><br><span class="line">    </span><br><span class="line">    return function()&#123;</span><br><span class="line">        console.log(&#39;用户模块初始化&#39;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;product.js</span><br><span class="line">define([],function()&#123;</span><br><span class="line">    </span><br><span class="line">    return &#123;</span><br><span class="line">        init()&#123;</span><br><span class="line">            console.log(&#39;商品模块初始化&#39;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>03-入口文件</p>
+<p><img src="/2020/02/24/AMD/1581001006484.png" alt="1581001006484"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;index.html</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;ie&#x3D;edge&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    </span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;!-- &lt;script src&#x3D;&quot;..&#x2F;require.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;.&#x2F;main.js&quot;&gt;&lt;&#x2F;script&gt; --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 简便写法 --&gt;</span><br><span class="line">&lt;script data-main&#x3D;&quot;main&quot; src&#x3D;&quot;..&#x2F;require.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;main.js</span><br><span class="line">require.config(&#123;</span><br><span class="line">    &#x2F;&#x2F;baseUrl</span><br><span class="line">    &#x2F;&#x2F;paths：用来配置一些常用的文件、文件夹路径</span><br><span class="line">    paths:&#123;</span><br><span class="line">        &#x2F;&#x2F;以后所有的模块调用都通过jquery短名称</span><br><span class="line">        jquery:&quot;jquery-3.3.1&quot;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;当然，不是所有的模块都需要配置在这里的，一般来说常用的模块、文件夹才需要配置</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;shim</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">require([&quot;jquery&quot;],function($)&#123;</span><br><span class="line">    console.log(&#39;首页&#39;);</span><br><span class="line"></span><br><span class="line">    $(&quot;body&quot;).append(&quot;&lt;div&gt;abc&lt;&#x2F;div&gt;&quot;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;user.js</span><br><span class="line">&#x2F;&#x2F; define([&quot;jquery&quot;],function($)&#123;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; &#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;解释：</span><br><span class="line">&#x2F;&#x2F;1、为什么每个模块要引用jquery，都需要引用jquery模块</span><br><span class="line">&#x2F;&#x2F;  --&gt;为了防止全局变量污染：$</span><br><span class="line">&#x2F;&#x2F;      --&gt;zepto:$</span><br><span class="line">&#x2F;&#x2F;  --&gt;使用amd的方式每个模块导入一下，$就是一个局部变量了</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;2、我们要使用paths来配置jquery，为什么？</span><br><span class="line">&#x2F;&#x2F;  --&gt;jquery版本升级？3.3.1--&gt;3.4.0，会导致牵一发而动全身的修改</span><br><span class="line">&#x2F;&#x2F;      --&gt;define([&quot;jquery-3.4.0&quot;]))</span><br><span class="line">&#x2F;&#x2F;      --&gt;define([&quot;jquery-3.4.0&quot;]))</span><br><span class="line">&#x2F;&#x2F;      --&gt;define([&quot;jquery-3.4.0&quot;]))</span><br><span class="line">&#x2F;&#x2F;  --&gt;以后代码结构、文件结构、项目结构进行了优化，其他模块引用的jquery又导致了牵一发而动全身的效果</span><br></pre></td></tr></table></figure>
+
+<p>04-baseurl</p>
+<p><img src="/2020/02/24/AMD/1581001081812.png" alt="1581001081812"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;index.html</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;ie&#x3D;edge&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    </span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    &#x2F;&#x2F;项目基本结构：lib存放第三方库</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script data-main&#x3D;&quot;app&quot; src&#x3D;&quot;.&#x2F;js&#x2F;lib&#x2F;require.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;app.js</span><br><span class="line">&#x2F;&#x2F;配置requirejs模块的基础路径</span><br><span class="line">require.config(&#123;</span><br><span class="line">    baseUrl:&quot;js&quot;,</span><br><span class="line">    &#x2F;&#x2F;paths里面的配置，也是相对于baseUrl的</span><br><span class="line">    paths:&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">require(</span><br><span class="line">        [</span><br><span class="line">            &quot;user&#x2F;index&quot;,</span><br><span class="line">            &quot;product&#x2F;index&quot;,</span><br><span class="line">        ],</span><br><span class="line">        function(userIndex,product)&#123;</span><br><span class="line">    console.log(&#39;首页&#39;);</span><br><span class="line"></span><br><span class="line">    var age &#x3D; userIndex();</span><br><span class="line">    console.log(age);</span><br><span class="line"></span><br><span class="line">    product();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;user&#x2F;index.js</span><br><span class="line">define([&quot;user&#x2F;detail&quot;],function(detail)&#123;</span><br><span class="line"></span><br><span class="line">    return function()&#123;</span><br><span class="line">        var age&#x3D;detail();</span><br><span class="line">        console.log(&#39;用户模块初始化&#39;);</span><br><span class="line"></span><br><span class="line">        return age++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;user&#x2F;detail.js</span><br><span class="line">define([],function()&#123;</span><br><span class="line">    var age&#x3D;18;</span><br><span class="line">    return function()&#123;</span><br><span class="line">        console.log(&#39;用户详细信息&#39;);</span><br><span class="line">        return age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;product&#x2F;index.js</span><br><span class="line">define([&quot;product&#x2F;add&quot;],function(productAdd)&#123;</span><br><span class="line"></span><br><span class="line">    return function()&#123;</span><br><span class="line"></span><br><span class="line">        console.log(&#39;商品初始化&#39;);</span><br><span class="line"></span><br><span class="line">        productAdd();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;product&#x2F;add.js</span><br><span class="line">define([],function()&#123;</span><br><span class="line"></span><br><span class="line">    return function()&#123;</span><br><span class="line"></span><br><span class="line">        console.log(&#39;商品增加的功能&#39;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/24/AMD/" data-id="ck7085em90004r8v21e0m7fku" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/02/24/jQuery/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          jQuery语法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/02/24/h5/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">h5</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/02/24/sass/">sass</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/24/jQuery/">jQuery语法</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/24/AMD/">AMD</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/24/h5/">h5</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/24/BFC/">BFC渲染机制</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Xue Yun<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

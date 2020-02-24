@@ -68,6 +68,320 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-sass" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/24/sass/" class="article-date">
+  <time datetime="2020-02-24T08:50:25.000Z" itemprop="datePublished">2020-02-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/24/sass/">sass</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>一、sass基本用法</strong></p>
+<p><strong>1.1 变量</strong></p>
+<p>SASS允许使用变量，所有变量以$开头。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$blue : #1875e7;　</span><br><span class="line"></span><br><span class="line">div &#123;</span><br><span class="line">	color : $blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果变量需要镶嵌在字符串之中，就必须需要写在#{}之中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$side : left;</span><br><span class="line"></span><br><span class="line">.rounded &#123;</span><br><span class="line">	border-#&#123;$side&#125;-radius: 5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>1.2 计算功能</strong></p>
+<p>SASS允许在代码中使用算式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">　　　　margin: (14px&#x2F;2);</span><br><span class="line">　　　　top: 50px + 100px;</span><br><span class="line">　　　　right: $var * 10%;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>1.3 嵌套</strong></p>
+<p>SASS允许选择器嵌套。比如，下面的CSS代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div h1 &#123;</span><br><span class="line">　　　　color : red;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以写成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">　　　　hi &#123;</span><br><span class="line">　　　　　　color:red;</span><br><span class="line">　　　　&#125;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p>属性也可以嵌套，比如border-color属性，可以写成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">p &#123;</span><br><span class="line">　　　　border: &#123;</span><br><span class="line">　　　　　　color: red;</span><br><span class="line">　　　　&#125;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意，border后面必须加上冒号。</p>
+<p>在嵌套的代码块内，可以使用&amp;引用父元素。比如a:hover伪类，可以写成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a &#123;</span><br><span class="line">　　　　&amp;:hover &#123; color: #ffb3ff; &#125;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>1.4 注释</strong></p>
+<p>SASS共有两种注释风格。</p>
+<p>标准的CSS注释 /* comment */ ，会保留到编译后的文件。</p>
+<p>单行注释 // comment，只保留在SASS源文件中，编译后被省略。</p>
+<p>在/*后面加一个感叹号，表示这是”重要注释”。即使是压缩模式编译，也会保留这行注释，通常可以用于声明版权信息。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*! </span><br><span class="line">　　　　重要注释！</span><br><span class="line">　　*&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p><strong>二、代码的重用</strong></p>
+<p><strong>2.1 继承</strong></p>
+<p>SASS允许一个选择器，继承另一个选择器。比如，现有class1：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.class1 &#123;</span><br><span class="line">　　　　border: 1px solid #ddd;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p>class2要继承class1，就要使用@extend命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.class2 &#123;</span><br><span class="line">　　　　@extend .class1;</span><br><span class="line">　　　　font-size:120%;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>2.2 Mixin</strong></p>
+<p>Mixin有点像C语言的宏（macro），是可以重用的代码块。</p>
+<p>使用@mixin命令，定义一个代码块。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@mixin left &#123;</span><br><span class="line">　　　　float: left;</span><br><span class="line">　　　　margin-left: 10px;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用@include命令，调用这个mixin。</p>
+<figure class="highlight plain"><figcaption><span>&#123;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">　　　　@include left;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p>mixin的强大之处，在于可以指定参数和缺省值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">　　@mixin left($value: 10px) &#123;</span><br><span class="line">　　　　float: left;</span><br><span class="line">　　　　margin-right: $value;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用的时候，根据需要加入参数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">　　　　@include left(20px);</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面是一个mixin的实例，用来生成浏览器前缀。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@mixin rounded($vert, $horz, $radius: 10px) &#123;</span><br><span class="line">　　　　border-#&#123;$vert&#125;-#&#123;$horz&#125;-radius: $radius;</span><br><span class="line">　　　　-moz-border-radius-#&#123;$vert&#125;#&#123;$horz&#125;: $radius;</span><br><span class="line">　　　　-webkit-border-#&#123;$vert&#125;-#&#123;$horz&#125;-radius: $radius;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用的时候，可以像下面这样调用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#navbar li &#123; @include rounded(top, left); &#125;</span><br><span class="line"></span><br><span class="line">#footer &#123; @include rounded(top, left, 5px); &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>2.3 颜色函数</strong></p>
+<p>SASS提供了一些内置的颜色函数，以便生成系列颜色。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lighten(#cc3, 10%) &#x2F;&#x2F; #d6d65c</span><br><span class="line">darken(#cc3, 10%) &#x2F;&#x2F; #a3a329</span><br><span class="line">grayscale(#cc3) &#x2F;&#x2F; #808080</span><br><span class="line">complement(#cc3) &#x2F;&#x2F; #33c</span><br></pre></td></tr></table></figure>
+
+<p><strong>2.4 插入文件</strong></p>
+<p>@import命令，用来插入外部文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@import &quot;path&#x2F;filename.scss&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>如果插入的是.css文件，则等同于css的import命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@import &quot;foo.css&quot;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>三、高级用法</strong></p>
+<p><strong>3.1 条件语句</strong></p>
+<p>@if可以用来判断：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p &#123;</span><br><span class="line">　　　　@if 1 + 1 &#x3D;&#x3D; 2 &#123; border: 1px solid; &#125;</span><br><span class="line">　　　　@if 5 &lt; 3 &#123; border: 2px dotted; &#125;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p>配套的还有@else命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@if lightness($color) &gt; 30% &#123;</span><br><span class="line">　　　　background-color: #000;</span><br><span class="line">　　&#125; @else &#123;</span><br><span class="line">　　　　background-color: #fff;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.2 循环语句</strong></p>
+<p>SASS支持for循环：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@for $i from 1 to 10 &#123;</span><br><span class="line">　　　　.border-#&#123;$i&#125; &#123;</span><br><span class="line"> 　　　　　　border: #&#123;$i&#125;px solid blue;</span><br><span class="line"> 　　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>也支持while循环：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$i: 6;</span><br><span class="line"></span><br><span class="line">　　@while $i &gt; 0 &#123;</span><br><span class="line">　　　　.item-#&#123;$i&#125; &#123; width: 2em * $i; &#125;</span><br><span class="line">　　　　$i: $i - 2;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p>each命令，作用与for类似：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@each $member in a, b, c, d &#123;</span><br><span class="line">　　　　.#&#123;$member&#125; &#123;</span><br><span class="line">　　　　　　background-image: url(&quot;&#x2F;image&#x2F;#&#123;$member&#125;.jpg&quot;);</span><br><span class="line">　　　　&#125;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.3 自定义函数</strong></p>
+<p>SASS允许用户编写自己的函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@function double($n) &#123;</span><br><span class="line">　　　　@return $n * 2;</span><br><span class="line">　　&#125;</span><br><span class="line"></span><br><span class="line">　　#sidebar &#123;</span><br><span class="line">　　　　width: double(5px);</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/24/sass/" data-id="ck7085elx0003r8v2a3vs7ae8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-jQuery" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/24/jQuery/" class="article-date">
+  <time datetime="2020-02-24T08:49:10.000Z" itemprop="datePublished">2020-02-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/24/jQuery/">jQuery语法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>jQuery 语法是通过选取 HTML 元素，并对选取的元素执行某些操作。</p>
+<p>基础语法： <strong>$(*selector*).*action*()</strong></p>
+<ul>
+<li><p>美元符号定义 jQuery</p>
+</li>
+<li><p>选择符（selector）”查询”和”查找” HTML 元素</p>
+</li>
+<li><p>jQuery 的 action() 执行对元素的操作</p>
+<p>实例: </p>
+</li>
+<li><p>$(“p”).hide() - 隐藏所有 </p><p> 元素</p>
+</li>
+<li><p>$(“p.test”).hide() - 隐藏所有 class=”test” 的 </p><p> 元素</p>
+<p>jQuery 函数位于一个 document ready 函数中： </p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(function()&#123;</span><br><span class="line"> </span><br><span class="line">   &#x2F;&#x2F; 开始写 jQuery 代码...</span><br><span class="line"> </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p> 简洁写法（与以上写法效果相同）: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(function()&#123;</span><br><span class="line"> </span><br><span class="line">   &#x2F;&#x2F; 开始写 jQuery 代码...</span><br><span class="line"> </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h1 id="jQuery-事件"><a href="#jQuery-事件" class="headerlink" title="jQuery 事件"></a>jQuery 事件</h1><table>
+<thead>
+<tr>
+<th align="left">鼠标事件</th>
+<th align="left">键盘事件</th>
+<th align="left">表单事件</th>
+<th align="left">文档/窗口事件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://www.runoob.com/jquery/event-click.html" target="_blank" rel="noopener">click</a></td>
+<td align="left"><a href="https://www.runoob.com/jquery/event-keypress.html" target="_blank" rel="noopener">keypress</a></td>
+<td align="left"><a href="https://www.runoob.com/jquery/event-submit.html" target="_blank" rel="noopener">submit</a></td>
+<td align="left"><a href="https://www.runoob.com/jquery/event-load.html" target="_blank" rel="noopener">load</a></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/jquery/event-dblclick.html" target="_blank" rel="noopener">dblclick</a></td>
+<td align="left"><a href="https://www.runoob.com/jquery/event-keydown.html" target="_blank" rel="noopener">keydown</a></td>
+<td align="left"><a href="https://www.runoob.com/jquery/event-change.html" target="_blank" rel="noopener">change</a></td>
+<td align="left"><a href="https://www.runoob.com/jquery/event-resize.html" target="_blank" rel="noopener">resize</a></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/jquery/event-mouseenter.html" target="_blank" rel="noopener">mouseenter</a></td>
+<td align="left"><a href="https://www.runoob.com/jquery/event-keyup.html" target="_blank" rel="noopener">keyup</a></td>
+<td align="left"><a href="https://www.runoob.com/jquery/event-focus.html" target="_blank" rel="noopener">focus</a></td>
+<td align="left"><a href="https://www.runoob.com/jquery/event-scroll.html" target="_blank" rel="noopener">scroll</a></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/jquery/event-mouseleave.html" target="_blank" rel="noopener">mouseleave</a></td>
+<td align="left"></td>
+<td align="left"><a href="https://www.runoob.com/jquery/event-blur.html" target="_blank" rel="noopener">blur</a></td>
+<td align="left"><a href="https://www.runoob.com/jquery/event-unload.html" target="_blank" rel="noopener">unload</a></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/jquery/event-hover.html" target="_blank" rel="noopener">hover</a></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/24/jQuery/" data-id="ck7085elw0002r8v23yz31jm2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-AMD" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/24/AMD/" class="article-date">
+  <time datetime="2020-02-24T08:46:13.000Z" itemprop="datePublished">2020-02-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/24/AMD/">AMD</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>随着web应用越来越复杂，嵌入的javascript代码越来越复杂，模块化编程就变成了必须。所以就有了后来的Dojo工具包和google的Closure库支持的模块系统。还有两个非常通用的标准规范，CommomJS和AMD。CommomJS规范的API是同步加载模块的，而实现AMD规范的API则是异步加载模块。所以理论上说，AMD规范的非阻塞加载更加适合浏览器端。而RequeireJS就是AMD规范的最好实现。在这里只讲述下AMD。</p>
+<blockquote>
+<p>RequeireJS是一个javascript模块加载器。它适合在浏览器中使用，有可以用在其他脚本环境。使用RequireJS加载模块化脚本将提高代码的加载速度和质量。</p>
+</blockquote>
+<h5 id="使用RequireJS的好处？"><a href="#使用RequireJS的好处？" class="headerlink" title="使用RequireJS的好处？"></a>使用RequireJS的好处？</h5><ul>
+<li>异步加载。我们知道，通常网站都会把script脚本放在html的最后，这样就可以避免浏览器执行js带来的页面阻塞。使用RequireJS，会在相关的js加载后执行回调函数，这个过程是异步的，所以它不会阻塞页面。</li>
+<li>按需加载。通过RequireJS，你可以在需要加载js逻辑的时候再加载对应的js模块，这样避免了在初始化网页的时候发生大量的请求和数据传输，或许对于一些人来说，某些模块可能他根本就不需要，那就显得没有必要。</li>
+<li>更加方便的模块化管理。相信你曾经一定遇到过因为script标签顺序问题而导致依赖关系发生错误，这个函数未定义，那个变量undefine之类的。通过RequireJS的机制，你能确保在所有的依赖模块都加载以后再执行相关的文件，所以可以起到依赖管理的作用。</li>
+<li>更加高效的版本管理。想一想，如果你还是用script脚本引入一个jQuery2.x的文件，然后你有100个页面都是这么引用的，那当你想换成jQuery3.x，那你就不得不去改这100个页面。但是如果你的RequireJS有在config中做jquery的path映射，那你之需要改一处就可以。</li>
+<li>当然还有一些诸如cdn加载不到js文件，可以请求本地文件等其它的优点。</li>
+</ul>
+<h5 id="用法？"><a href="#用法？" class="headerlink" title="用法？"></a>用法？</h5><p>AMD基本用法：其中require.js是而外下载引入的工具包</p>
+<p><img src="/2020/02/24/AMD/1581000462260.png" alt="1581000462260"></p>
+<p>01-基本用法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;index.html</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;ie&#x3D;edge&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    </span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;..&#x2F;require.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    &#x2F;&#x2F;index.html</span><br><span class="line">    &#x2F;&#x2F;  --&gt;cart.js</span><br><span class="line">    &#x2F;&#x2F;      --&gt;cartDetail</span><br><span class="line">    &#x2F;&#x2F;  --&gt;user.js</span><br><span class="line">    &#x2F;&#x2F;      --&gt;userDetail</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;在一个单页应用中，只需要调用一次require，后面全是define</span><br><span class="line">    require([&quot;cart&quot;,&quot;user&quot;],function()&#123;</span><br><span class="line">        &#x2F;&#x2F;这里是首页模块的自己的逻辑</span><br><span class="line">        console.log(&#39;首页模块&#39;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;最终输出逻辑？</span><br><span class="line">    &#x2F;&#x2F;--&gt;首页模块最后输出</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;类似于打仗全军集合</span><br><span class="line">    &#x2F;&#x2F;--&gt;a师</span><br><span class="line">    &#x2F;&#x2F;  --&gt;1旅</span><br><span class="line">    &#x2F;&#x2F;  --&gt;2旅</span><br><span class="line">    &#x2F;&#x2F;--&gt;b师</span><br><span class="line">    &#x2F;&#x2F;--&gt;c师</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;当所有的师部都集合完毕，全军才能出发</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;cart.js</span><br><span class="line">define([&quot;cartDetail&quot;],function()&#123;</span><br><span class="line">    console.log(&#39;购物车模块&#39;);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;需要在cart模块内部调用cartDetail模块？</span><br><span class="line">    &#x2F;&#x2F;--&gt;需要cart模块内部引用cartDetail的路径</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;cartDetail.js</span><br><span class="line">define([],function()&#123;</span><br><span class="line">    console.log(&#39;购物车模块详细信息&#39;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;user.js</span><br><span class="line">define([&quot;userDetail&quot;],function()&#123;</span><br><span class="line">    console.log(&#39;用户模块&#39;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;userDetail.js</span><br><span class="line">define([],function()&#123;</span><br><span class="line">    console.log(&#39;用户详细信息模块&#39;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>02-模块返回值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;index.html</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;ie&#x3D;edge&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;button id&#x3D;&quot;user&quot;&gt;用户模块&lt;&#x2F;button&gt;</span><br><span class="line">    &lt;button id&#x3D;&quot;product&quot;&gt;商品模块&lt;&#x2F;button&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;..&#x2F;require.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    &#x2F;&#x2F;给回调函数添加形参，接收前面对应模块的返回值，模块返回什么，形参的值就是什么</span><br><span class="line">    &#x2F;&#x2F;形参的顺序，必须和前面调用模块的顺序保持一致</span><br><span class="line">    require([&quot;user&quot;,&quot;product&quot;],function(user,product)&#123;</span><br><span class="line">        &#x2F;&#x2F;实现用户点击了按钮，出现用户模块的逻辑</span><br><span class="line">        &#x2F;&#x2F;--&gt;需要改造user模块，把它改成&#39;按需加载&#39;的加载</span><br><span class="line"></span><br><span class="line">        var btnUser&#x3D;document.getElementById(&quot;user&quot;);</span><br><span class="line">        btnUser.onclick&#x3D;function()&#123;</span><br><span class="line">            &#x2F;&#x2F;调用用户模块逻辑</span><br><span class="line">            user();</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        var btnProduct&#x3D;document.getElementById(&quot;product&quot;);</span><br><span class="line">        btnProduct.onclick&#x3D;function()&#123;</span><br><span class="line">            &#x2F;&#x2F;执行商品模块的逻辑</span><br><span class="line">            product.init();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;user.js</span><br><span class="line">define([],function()&#123;</span><br><span class="line">    </span><br><span class="line">    return function()&#123;</span><br><span class="line">        console.log(&#39;用户模块初始化&#39;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;product.js</span><br><span class="line">define([],function()&#123;</span><br><span class="line">    </span><br><span class="line">    return &#123;</span><br><span class="line">        init()&#123;</span><br><span class="line">            console.log(&#39;商品模块初始化&#39;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>03-入口文件</p>
+<p><img src="/2020/02/24/AMD/1581001006484.png" alt="1581001006484"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;index.html</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;ie&#x3D;edge&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    </span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;!-- &lt;script src&#x3D;&quot;..&#x2F;require.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;.&#x2F;main.js&quot;&gt;&lt;&#x2F;script&gt; --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 简便写法 --&gt;</span><br><span class="line">&lt;script data-main&#x3D;&quot;main&quot; src&#x3D;&quot;..&#x2F;require.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;main.js</span><br><span class="line">require.config(&#123;</span><br><span class="line">    &#x2F;&#x2F;baseUrl</span><br><span class="line">    &#x2F;&#x2F;paths：用来配置一些常用的文件、文件夹路径</span><br><span class="line">    paths:&#123;</span><br><span class="line">        &#x2F;&#x2F;以后所有的模块调用都通过jquery短名称</span><br><span class="line">        jquery:&quot;jquery-3.3.1&quot;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F;当然，不是所有的模块都需要配置在这里的，一般来说常用的模块、文件夹才需要配置</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F;shim</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">require([&quot;jquery&quot;],function($)&#123;</span><br><span class="line">    console.log(&#39;首页&#39;);</span><br><span class="line"></span><br><span class="line">    $(&quot;body&quot;).append(&quot;&lt;div&gt;abc&lt;&#x2F;div&gt;&quot;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;user.js</span><br><span class="line">&#x2F;&#x2F; define([&quot;jquery&quot;],function($)&#123;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; &#125;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;解释：</span><br><span class="line">&#x2F;&#x2F;1、为什么每个模块要引用jquery，都需要引用jquery模块</span><br><span class="line">&#x2F;&#x2F;  --&gt;为了防止全局变量污染：$</span><br><span class="line">&#x2F;&#x2F;      --&gt;zepto:$</span><br><span class="line">&#x2F;&#x2F;  --&gt;使用amd的方式每个模块导入一下，$就是一个局部变量了</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;2、我们要使用paths来配置jquery，为什么？</span><br><span class="line">&#x2F;&#x2F;  --&gt;jquery版本升级？3.3.1--&gt;3.4.0，会导致牵一发而动全身的修改</span><br><span class="line">&#x2F;&#x2F;      --&gt;define([&quot;jquery-3.4.0&quot;]))</span><br><span class="line">&#x2F;&#x2F;      --&gt;define([&quot;jquery-3.4.0&quot;]))</span><br><span class="line">&#x2F;&#x2F;      --&gt;define([&quot;jquery-3.4.0&quot;]))</span><br><span class="line">&#x2F;&#x2F;  --&gt;以后代码结构、文件结构、项目结构进行了优化，其他模块引用的jquery又导致了牵一发而动全身的效果</span><br></pre></td></tr></table></figure>
+
+<p>04-baseurl</p>
+<p><img src="/2020/02/24/AMD/1581001081812.png" alt="1581001081812"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;index.html</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;ie&#x3D;edge&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    </span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    &#x2F;&#x2F;项目基本结构：lib存放第三方库</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script data-main&#x3D;&quot;app&quot; src&#x3D;&quot;.&#x2F;js&#x2F;lib&#x2F;require.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;app.js</span><br><span class="line">&#x2F;&#x2F;配置requirejs模块的基础路径</span><br><span class="line">require.config(&#123;</span><br><span class="line">    baseUrl:&quot;js&quot;,</span><br><span class="line">    &#x2F;&#x2F;paths里面的配置，也是相对于baseUrl的</span><br><span class="line">    paths:&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">require(</span><br><span class="line">        [</span><br><span class="line">            &quot;user&#x2F;index&quot;,</span><br><span class="line">            &quot;product&#x2F;index&quot;,</span><br><span class="line">        ],</span><br><span class="line">        function(userIndex,product)&#123;</span><br><span class="line">    console.log(&#39;首页&#39;);</span><br><span class="line"></span><br><span class="line">    var age &#x3D; userIndex();</span><br><span class="line">    console.log(age);</span><br><span class="line"></span><br><span class="line">    product();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;user&#x2F;index.js</span><br><span class="line">define([&quot;user&#x2F;detail&quot;],function(detail)&#123;</span><br><span class="line"></span><br><span class="line">    return function()&#123;</span><br><span class="line">        var age&#x3D;detail();</span><br><span class="line">        console.log(&#39;用户模块初始化&#39;);</span><br><span class="line"></span><br><span class="line">        return age++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;user&#x2F;detail.js</span><br><span class="line">define([],function()&#123;</span><br><span class="line">    var age&#x3D;18;</span><br><span class="line">    return function()&#123;</span><br><span class="line">        console.log(&#39;用户详细信息&#39;);</span><br><span class="line">        return age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;product&#x2F;index.js</span><br><span class="line">define([&quot;product&#x2F;add&quot;],function(productAdd)&#123;</span><br><span class="line"></span><br><span class="line">    return function()&#123;</span><br><span class="line"></span><br><span class="line">        console.log(&#39;商品初始化&#39;);</span><br><span class="line"></span><br><span class="line">        productAdd();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;product&#x2F;add.js</span><br><span class="line">define([],function()&#123;</span><br><span class="line"></span><br><span class="line">    return function()&#123;</span><br><span class="line"></span><br><span class="line">        console.log(&#39;商品增加的功能&#39;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/24/AMD/" data-id="ck7085em90004r8v21e0m7fku" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-h5" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/02/24/h5/" class="article-date">
@@ -1627,7 +1941,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/24/h5/" data-id="ck707jjmi0002ngv26s6td16z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/24/h5/" data-id="ck7085en70005r8v28y670koh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1717,7 +2031,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/24/BFC/" data-id="ck707jjl90000ngv242834qb0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/24/BFC/" data-id="ck7085elh0000r8v29jffesdr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1920,7 +2234,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/24/bootstrap/" data-id="ck707jjli0001ngv26hkx1jkl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/24/bootstrap/" data-id="ck7085elt0001r8v20njye61u" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1961,15 +2275,23 @@
       <ul>
         
           <li>
+            <a href="/2020/02/24/sass/">sass</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/24/jQuery/">jQuery语法</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/24/AMD/">AMD</a>
+          </li>
+        
+          <li>
             <a href="/2020/02/24/h5/">h5</a>
           </li>
         
           <li>
             <a href="/2020/02/24/BFC/">BFC渲染机制</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/24/bootstrap/">响应式开发</a>
           </li>
         
       </ul>
