@@ -142,7 +142,7 @@
 </tr>
 <tr>
 <td>figure</td>
-<td>代表一个独立的流内容片段，通常作为一个文档主流的独立单元。<figure><br> <video src="example.webm" controls></video><br> <figcaption>Example</figcaption><br></figure></td>
+<td>代表一个独立的流内容片段，通常作为一个文档主流的独立单元。</td>
 </tr>
 <tr>
 <td>figcaption</td>
@@ -211,7 +211,7 @@
 </tr>
 <tr>
 <td>datalist</td>
-<td>与 input 的新属性 list 一起使用可以创建下拉框：<input list="browsers"><datalist id="browsers"><br> <option value="Safari"><br> </option><option value="Internet Explorer"><br> </option><option value="Opera"><br> </option><option value="Firefox"><br></option></datalist></td>
+<td>与 input 的新属性 list 一起使用可以创建下拉框</td>
 </tr>
 <tr>
 <td>keygen</td>
@@ -247,7 +247,7 @@
 </tr>
 <tr>
 <td>input , select , textarea</td>
-<td>有新的 required 属性，它提示用户为了能够提交表单而必须填入一个值。对于 select 来说，第一个 option 元素必须以一个空值占位。<label>Color: <select name="color" required><br> <option value>Choose one<br> </option><option>Red<br> </option><option>Green<br> </option><option>Blue<br></option></select></label></td>
+<td>有新的 required 属性，它提示用户为了能够提交表单而必须填入一个值。对于 select 来说，第一个 option 元素必须以一个空值占位。</td>
 </tr>
 <tr>
 <td>fieldset</td>
@@ -345,22 +345,22 @@
 <tr>
 <td>element</td>
 <td>p</td>
-<td>查询所有<p>元素</p></td>
+<td>查询所有p元素</td>
 </tr>
 <tr>
 <td>Element,element</td>
 <td>Div,p</td>
-<td>查询所有<p> 和<div>元素</div></p></td>
+<td>查询所有p和div元素</td>
 </tr>
 <tr>
 <td>Element element</td>
 <td>Div p</td>
-<td>所有在<div>中的<p>元素</p></div></td>
+<td>所有在div中的p元素</td>
 </tr>
 <tr>
 <td>Element&gt;element</td>
 <td>Div&gt;p</td>
-<td>所有<p>并父元素是<div>的元素</div></p></td>
+<td>所有p并父元素是div的元素</td>
 </tr>
 <tr>
 <td>[attribute]</td>
@@ -375,52 +375,52 @@
 <tr>
 <td>[attribute^=value]</td>
 <td>a[href^=”http”]</td>
-<td>查询所有<a>并src属性以http开头的元素</a></td>
+<td>查询所有a并src属性以http开头的元素</td>
 </tr>
 <tr>
 <td>[attribute$=value]</td>
 <td>a[href$=“.htm”]</td>
-<td>查询所有<a>并src属性以.htm结尾的元素</a></td>
+<td>查询所有a并src属性以.htm结尾的元素</td>
 </tr>
 <tr>
 <td>[attribute*=value]</td>
 <td>a[href^=“index “]</td>
-<td>所有<a>并src属性含有index的元素</a></td>
+<td>所有a并src属性含有index的元素</td>
 </tr>
 <tr>
 <td>:first-child</td>
 <td>p:first-child</td>
-<td>所有<p>并且为父元素的第1个子元素</p></td>
+<td>所有p并且为父元素的第1个子元素</td>
 </tr>
 <tr>
 <td>:last-child</td>
 <td>p:last-child</td>
-<td>所有<p>并且为父元素的最后1个子元素</p></td>
+<td>所有p并且为父元素的最后1个子元素</td>
 </tr>
 <tr>
 <td>:nth-child(n)</td>
 <td>p:nth-child(2)</td>
-<td>所有<p>并且为父元素的第2个子元素</p></td>
+<td>所有p并且为父元素的第2个子元素</td>
 </tr>
 <tr>
 <td>:first-of-type</td>
 <td>p:first-of-type</td>
-<td>所有<p>并且为父元素的第1个</p><p>元素</p></td>
+<td>所有p并且为父元素的第1个p元素</td>
 </tr>
 <tr>
 <td>:last-of-type</td>
 <td>p:last-of-type</td>
-<td>所有<p>并且为父元素的最后1个</p><p>元素</p></td>
+<td>所有p并且为父元素的最后1个p元素</td>
 </tr>
 <tr>
 <td>:nth-last-of-type(n)</td>
 <td>p:nth-last-of-type(2)</td>
-<td>所有<p>并且为父元素的第2个</p><p>元素</p></td>
+<td>所有p并且为父元素的第2个p元素</td>
 </tr>
 <tr>
 <td>:not(selector)</td>
 <td>:not(p)</td>
-<td>查询所有非<p>元素</p></td>
+<td>查询所有非p元素</td>
 </tr>
 </tbody></table>
 <h5 id="（二）JSON-parse"><a href="#（二）JSON-parse" class="headerlink" title="（二）JSON parse"></a>（二）JSON parse</h5><ol>
@@ -501,6 +501,7 @@
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;progress max&#x3D;&quot;100&quot; value&#x3D;&quot;30&quot;&gt;&lt;&#x2F;progress&gt;</span><br></pre></td></tr></table></figure>
 
+<p><progress max="100" value="30"></progress></p>
 <ol start="2">
 <li>Mark</li>
 </ol>
@@ -514,14 +515,12 @@
 <address>中国，北京</address>
 </li>
 <li><p>Colgroup col</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;table border&#x3D;&quot;1&quot;&gt;</span><br><span class="line">		&lt;colgroup&gt;</span><br><span class="line">			&lt;col style&#x3D;&quot;background-color:red;&quot; &#x2F;&gt;</span><br><span class="line">			&lt;col style&#x3D;&quot;background-color:blue&quot; &#x2F;&gt;</span><br><span class="line">		&lt;&#x2F;colgroup&gt;</span><br><span class="line">		&lt;tr&gt;</span><br><span class="line">			&lt;td&gt;id&lt;&#x2F;td&gt;</span><br><span class="line">			&lt;td&gt;name&lt;&#x2F;td&gt;</span><br><span class="line">		&lt;&#x2F;tr&gt;</span><br><span class="line">	&lt;&#x2F;table&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;table border&#x3D;&quot;1&quot;&gt;</span><br><span class="line">	&lt;colgroup&gt;</span><br><span class="line">		&lt;col style&#x3D;&quot;background-color:red;&quot; &#x2F;&gt;</span><br><span class="line">		&lt;col style&#x3D;&quot;background-color:blue&quot; &#x2F;&gt;</span><br><span class="line">	&lt;&#x2F;colgroup&gt;</span><br><span class="line">	&lt;tr&gt;</span><br><span class="line">		&lt;td&gt;id&lt;&#x2F;td&gt;</span><br><span class="line">		&lt;td&gt;name&lt;&#x2F;td&gt;</span><br><span class="line">	&lt;&#x2F;tr&gt;</span><br><span class="line">&lt;&#x2F;table&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Keygen 生成public key</p>
-<ol start="6">
-<li><p>fieldset legend</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;fieldset&gt;</span><br><span class="line">		&lt;legend&gt;标题1&lt;&#x2F;legend&gt;</span><br><span class="line">		name:&lt;input &#x2F;&gt;&lt;br&#x2F;&gt;</span><br><span class="line">		email:&lt;input &#x2F;&gt;</span><br><span class="line">	&lt;&#x2F;fieldset&gt;</span><br><span class="line">	&lt;br &#x2F;&gt;</span><br><span class="line">	&lt;fieldset&gt;</span><br><span class="line">		&lt;legend&gt;标题2 &lt;&#x2F;legend&gt;</span><br><span class="line">		name2:&lt;input &#x2F;&gt;&lt;br&#x2F;&gt;</span><br><span class="line">		email2:&lt;input &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;fieldset&gt;</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
+<li><p>fieldset legend</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;fieldset&gt;</span><br><span class="line">	&lt;legend&gt;标题1&lt;&#x2F;legend&gt;</span><br><span class="line">		name:&lt;input &#x2F;&gt;&lt;br&#x2F;&gt;</span><br><span class="line">		email:&lt;input &#x2F;&gt;</span><br><span class="line">	&lt;&#x2F;fieldset&gt;</span><br><span class="line">	&lt;br &#x2F;&gt;</span><br><span class="line">	&lt;fieldset&gt;</span><br><span class="line">		&lt;legend&gt;标题2 &lt;&#x2F;legend&gt;</span><br><span class="line">		name2:&lt;input &#x2F;&gt;&lt;br&#x2F;&gt;</span><br><span class="line">		email2:&lt;input &#x2F;&gt;</span><br><span class="line">&lt;&#x2F;fieldset&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>ol li<br>reversed,start,type</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol type&#x3D;&quot;A&quot; contenteditable&#x3D;&quot;true&quot;&gt;</span><br><span class="line">		&lt;li&gt;列表12&lt;&#x2F;li&gt;</span><br><span class="line">		&lt;li&gt;列表2&lt;&#x2F;li&gt;</span><br><span class="line">		&lt;li&gt;列表3&lt;&#x2F;li&gt;</span><br><span class="line">&lt;&#x2F;ol&gt;</span><br></pre></td></tr></table></figure>
@@ -585,7 +584,7 @@
 <li><p>location . reload()</p>
 <pre><code>重新加载页面</code></pre></li>
 </ol>
-<h5 id="（四）h5的存储革命"><a href="#（四）h5的存储革命" class="headerlink" title="（四）h5的存储革命"></a>（四）h5的存储革命</h5><h4 id="五、h5的存储革命"><a href="#五、h5的存储革命" class="headerlink" title="五、h5的存储革命"></a>五、h5的存储革命</h4><h5 id="（一）HTML5之前的本地存储"><a href="#（一）HTML5之前的本地存储" class="headerlink" title="（一）HTML5之前的本地存储"></a>（一）HTML5之前的本地存储</h5><p>一、Cookie</p>
+<h4 id="五、h5的存储革命"><a href="#五、h5的存储革命" class="headerlink" title="五、h5的存储革命"></a>五、h5的存储革命</h4><h5 id="（一）HTML5之前的本地存储"><a href="#（一）HTML5之前的本地存储" class="headerlink" title="（一）HTML5之前的本地存储"></a>（一）HTML5之前的本地存储</h5><p>1）Cookie</p>
 <p>​     <img src="/2020/02/24/h5/1580389868859.png" alt="1580389868859"></p>
 <p>​    缺点：</p>
 <ol>
@@ -596,19 +595,19 @@
 <li><p>在http中是明文传输，安全性比较低</p>
 </li>
 </ol>
-<p>二、Flash Local Shared Objects</p>
+<p>2）Flash Local Shared Objects</p>
 <p>2002年Flash推出的可以在Flash对象中存储100K的数据</p>
 <p>缺点：需要Flash的支持，存在技术局限性</p>
-<p>三、Gears</p>
+<p>3）Gears</p>
 <p>2007年Google启动的项目，通过插件技术增强浏览器的。Gears提供Api访问基于Sqlite的嵌入式SQL数据库。<br>    缺点：用户必须去安装Gears插件，不可控。</p>
 <h5 id="（二）WAP时代的本地存储"><a href="#（二）WAP时代的本地存储" class="headerlink" title="（二）WAP时代的本地存储"></a>（二）WAP时代的本地存储</h5><p>不支持任何本地存储。</p>
-<h5 id="（三）HTML5的本地存储介绍"><a href="#（三）HTML5的本地存储介绍" class="headerlink" title="（三）HTML5的本地存储介绍"></a>（三）HTML5的本地存储介绍</h5><p>一、什么是HTML5本地存储?</p>
+<h5 id="（三）HTML5的本地存储介绍"><a href="#（三）HTML5的本地存储介绍" class="headerlink" title="（三）HTML5的本地存储介绍"></a>（三）HTML5的本地存储介绍</h5><p>1）什么是HTML5本地存储?</p>
 <ol>
 <li>一种让网页可以把键值对存储在用户浏览器客户端的方法。像Cookie一样，这些数据不会因为你打开新网站，刷新页面，乃至关闭你的浏览器而消失。(只能存储字符串)。</li>
 <li>而与Cookie不同的时，这些数据不会每次随着HTTP请求被发送到服务器端</li>
 <li>HTML5规范的一部分，这一接口会被浏览器原生支持，不用依赖任何第三方插件。只要浏览器支持html5就能支持。</li>
 </ol>
-<p>二、手机对本地存储的支持情况</p>
+<p>2）手机对本地存储的支持情况</p>
 <table>
 <thead>
 <tr>
@@ -621,12 +620,12 @@
 <td>2.0+</td>
 </tr>
 </tbody></table>
-<p>三、判断浏览器是否支持 本地存储</p>
+<p>3）判断浏览器是否支持 本地存储</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function isSupportStorage()&#123;</span><br><span class="line">		   return &quot;localStorage&quot; in window;</span><br><span class="line">	       &#125;</span><br></pre></td></tr></table></figure>
 
-<h5 id="（四）LocalStorage"><a href="#（四）LocalStorage" class="headerlink" title="（四）LocalStorage"></a>（四）LocalStorage</h5><h5 id="本地存储不会过期的数据。"><a href="#本地存储不会过期的数据。" class="headerlink" title="本地存储不会过期的数据。"></a>本地存储不会过期的数据。</h5><p>一、W3C定义的Storage的接口</p>
+<h5 id="（四）LocalStorage"><a href="#（四）LocalStorage" class="headerlink" title="（四）LocalStorage"></a>（四）LocalStorage</h5><h5 id="本地存储不会过期的数据。"><a href="#本地存储不会过期的数据。" class="headerlink" title="本地存储不会过期的数据。"></a>本地存储不会过期的数据。</h5><p>1）W3C定义的Storage的接口</p>
 <p><img src="/2020/02/24/h5/1580390391225.png" alt="1580390391225"></p>
-<p>二、localStorage的操作</p>
+<p>2）localStorage的操作</p>
 <ol>
 <li><p>存储数据</p>
 </li>
@@ -639,7 +638,7 @@
 <li><p>保存JSON对象</p>
 </li>
 </ol>
-<p>三、使用场景</p>
+<p>3）使用场景</p>
 <ol>
 <li><p>存储一些很少变动的数据，比如用户的昵称。</p>
 <ol start="2">
@@ -647,18 +646,18 @@
 </ol>
 </li>
 </ol>
-<p>四、不同于服务器存储</p>
+<p>4）不同于服务器存储</p>
 <p>数据可能随时丢掉；当服务器缓存使用</p>
-<h5 id="（五）sessionStorage"><a href="#（五）sessionStorage" class="headerlink" title="（五）sessionStorage"></a>（五）sessionStorage</h5><h5 id="本地存储当前回话的数据"><a href="#本地存储当前回话的数据" class="headerlink" title="本地存储当前回话的数据"></a>本地存储当前回话的数据</h5><p>一、API接口</p>
+<h5 id="（五）sessionStorage"><a href="#（五）sessionStorage" class="headerlink" title="（五）sessionStorage"></a>（五）sessionStorage</h5><h5 id="本地存储当前回话的数据"><a href="#本地存储当前回话的数据" class="headerlink" title="本地存储当前回话的数据"></a>本地存储当前回话的数据</h5><p>1）API接口</p>
 <p>与localStorage相同</p>
-<p>二、 sessionStorage操作</p>
+<p>2） sessionStorage操作</p>
 <ol>
 <li>存储数据</li>
 </ol>
 <ol start="2">
 <li>读取数据</li>
 </ol>
-<p>三、使用场景<br>       代替Session，比如购物车</p>
+<p>3）使用场景<br>       代替Session，比如购物车</p>
 <h5 id="（六）Indexed-database"><a href="#（六）Indexed-database" class="headerlink" title="（六）Indexed database"></a>（六）Indexed database</h5><p>浏览器中存储大量结构化的数据，并提供索引以保证高效率的查询。</p>
 <h4 id="六、多媒体盛宴1"><a href="#六、多媒体盛宴1" class="headerlink" title="六、多媒体盛宴1"></a>六、多媒体盛宴1</h4><h5 id="Audio-api"><a href="#Audio-api" class="headerlink" title="Audio api"></a>Audio api</h5><p>1、方法</p>
 <table>
@@ -903,7 +902,7 @@
 <h5 id="SVG例子"><a href="#SVG例子" class="headerlink" title="SVG例子"></a>SVG例子</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">&lt;title&gt;SVG画图demo&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;svg xmlns&#x3D;&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; version&#x3D;&quot;1.1&quot;&gt;</span><br><span class="line">	  &lt;circle cx&#x3D;&quot;100&quot; cy&#x3D;&quot;50&quot; r&#x3D;&quot;40&quot; stroke&#x3D;&quot;black&quot; stroke-width&#x3D;&quot;2&quot; fill&#x3D;&quot;red&quot; &#x2F;&gt;</span><br><span class="line">	&lt;&#x2F;svg&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
 
 <h5 id="SVG基本形状"><a href="#SVG基本形状" class="headerlink" title="SVG基本形状"></a>SVG基本形状</h5><ol>
-<li>Rectangle(矩形) <rect></rect>  </li>
+<li><h5 id="Rectangle-矩形-rect"><a href="#Rectangle-矩形-rect" class="headerlink" title="Rectangle(矩形) rect"></a>Rectangle(矩形) rect</h5></li>
 </ol>
 <table>
 <thead>
@@ -926,7 +925,7 @@
 </tr>
 </tbody></table>
 <ol start="2">
-<li>Circle (圆形)  <circle></circle></li>
+<li><h5 id="Circle-圆形-circle"><a href="#Circle-圆形-circle" class="headerlink" title="Circle (圆形)  circle"></a>Circle (圆形)  circle</h5></li>
 </ol>
 <table>
 <thead>
@@ -945,7 +944,7 @@
 </tr>
 </tbody></table>
 <ol start="3">
-<li>Ellipse (椭圆) <ellipse></ellipse></li>
+<li><h5 id="Ellipse-椭圆-ellipse"><a href="#Ellipse-椭圆-ellipse" class="headerlink" title="Ellipse (椭圆) ellipse"></a>Ellipse (椭圆) ellipse</h5></li>
 </ol>
 <table>
 <thead>
@@ -968,7 +967,7 @@
 </tr>
 </tbody></table>
 <ol start="4">
-<li>Line(直线)     <line></line></li>
+<li><h5 id="Line-直线-line"><a href="#Line-直线-line" class="headerlink" title="Line(直线) line"></a>Line(直线) line</h5></li>
 </ol>
 <table>
 <thead>
@@ -987,7 +986,7 @@
 </tr>
 </tbody></table>
 <ol start="5">
-<li>Polyline (曲线)  <polyline></polyline></li>
+<li><h5 id="Polyline-曲线-polyline"><a href="#Polyline-曲线-polyline" class="headerlink" title="Polyline (曲线)  polyline"></a>Polyline (曲线)  polyline</h5></li>
 </ol>
 <table>
 <thead>
@@ -1002,7 +1001,7 @@
 </tr>
 </tbody></table>
 <ol start="6">
-<li>Polygon (多边形) <polygon></polygon></li>
+<li><h5 id="Polygon-多边形-polygon"><a href="#Polygon-多边形-polygon" class="headerlink" title="Polygon (多边形) polygon"></a>Polygon (多边形) polygon</h5></li>
 </ol>
 <table>
 <thead>
@@ -1017,7 +1016,7 @@
 </tr>
 </tbody></table>
 <ol start="7">
-<li>path: 代表1个形状的轮廓，这个轮廓可以被填充、加边框、剪裁等。</li>
+<li><h5 id="path-代表1个形状的轮廓，这个轮廓可以被填充、加边框、剪裁等。"><a href="#path-代表1个形状的轮廓，这个轮廓可以被填充、加边框、剪裁等。" class="headerlink" title="path: 代表1个形状的轮廓，这个轮廓可以被填充、加边框、剪裁等。"></a>path: 代表1个形状的轮廓，这个轮廓可以被填充、加边框、剪裁等。</h5></li>
 </ol>
 <p><img src="/2020/02/24/h5/1580399418248.png" alt="1580399418248"></p>
 <table>
@@ -1628,7 +1627,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/24/h5/" data-id="ck706qrvr0002jov26iw0fzki" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/24/h5/" data-id="ck707jjmi0002ngv26s6td16z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1718,7 +1717,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/24/BFC/" data-id="ck706qruj0001jov2h3dz5xb1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/24/BFC/" data-id="ck707jjl90000ngv242834qb0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1921,7 +1920,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/24/bootstrap/" data-id="ck706qrua0000jov230dr4ylp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/24/bootstrap/" data-id="ck707jjli0001ngv26hkx1jkl" class="article-share-link">Share</a>
       
       
     </footer>
