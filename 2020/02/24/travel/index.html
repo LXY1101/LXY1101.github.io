@@ -27,7 +27,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/02/24/travel/1581924430666.png">
 <meta property="og:image" content="http://yoursite.com/2020/02/24/travel/vuex.png">
 <meta property="article:published_time" content="2020-02-24T09:10:16.000Z">
-<meta property="article:modified_time" content="2020-02-24T15:27:07.356Z">
+<meta property="article:modified_time" content="2020-02-25T04:01:29.475Z">
 <meta property="article:author" content="Xue Yun">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2020/02/24/travel/1581583584192.png">
@@ -122,16 +122,15 @@
 </ol>
 <h5 id="10、首页开发"><a href="#10、首页开发" class="headerlink" title="10、首页开发"></a>10、首页开发</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install stylus --save</span><br><span class="line"></span><br><span class="line">npm install stylus-loader --save</span><br></pre></td></tr></table></figure>
 
-<blockquote>
 <p>移动端设计图为二倍图</p>
-</blockquote>
 <h5 id="11、使用iconfont与代码优化"><a href="#11、使用iconfont与代码优化" class="headerlink" title="11、使用iconfont与代码优化"></a>11、使用iconfont与代码优化</h5><ul>
 <li>iconfont官网注册账号——新建项目——下载需要的的iconfont图标——在styles目录下创建iconfont目录，将下载文件夹中的iconfont.css文件放在style目录下，将iconfont.eot、iconfont.svg、iconfont.ttf、iconfont.woff文件放在iconfont目录中——在main.js中引入 import ‘./assets/styles/iconfont.css’——在官网上复制对应图标代码在页面上使用</li>
 </ul>
-<blockquote>
-<p>样式里面引入样式需要使用 @import</p>
-<p>样式里面使用@（代表src）需要在@前面加~</p>
-</blockquote>
+<p>注意：</p>
+<ol>
+<li>样式里面引入样式需要使用 @import</li>
+<li>样式里面使用@（代表src）需要在@前面加~</li>
+</ol>
 <ul>
 <li>webpack代码简化</li>
 </ul>
@@ -142,46 +141,38 @@
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-awesome-swiper --save&#x2F;&#x2F;github搜索vue-awesome-swipe插件，npm安装插件</span><br></pre></td></tr></table></figure>
 
-<h6 id="github搜索："><a href="#github搜索：" class="headerlink" title="github搜索："></a>github搜索：</h6><p><img src="/2020/02/24/travel/1581821051755.png" alt="1581821051755"></p>
-<h6 id="引入插件："><a href="#引入插件：" class="headerlink" title="引入插件："></a>引入插件：</h6><p><img src="/2020/02/24/travel/1581821450295.png" alt="1581821450295"></p>
-<h6 id="vue中使用这个代码："><a href="#vue中使用这个代码：" class="headerlink" title="vue中使用这个代码："></a>vue中使用这个代码：</h6><p><img src="/2020/02/24/travel/1581821140070.png" alt="1581821140070"></p>
-<blockquote>
+<p>github搜索：</p>
+<p><img src="/2020/02/24/travel/1581821051755.png" alt="1581821051755"></p>
+<p>引入插件：</p>
+<p><img src="/2020/02/24/travel/1581821450295.png" alt="1581821450295"></p>
+<p>vue中使用这个代码：</p>
+<p><img src="/2020/02/24/travel/1581821140070.png" alt="1581821140070"></p>
+<p>注意：</p>
 <ol>
-<li><p>设置图片框高 width: 100%。</p>
-</li>
-<li><p>解决图片加载抖动感：在swiper外层加个div；padding-bottom: 37.25%为图片的宽高比</p>
-</li>
+<li>设置图片框高 width: 100%。</li>
+<li>解决图片加载抖动感：在swiper外层加个div；padding-bottom: 37.25%为图片的宽高比</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.swiper&#123;  width: 100%;  padding-bottom: 37.25%;  height: 0;  overflow: hidden;background #eee&#125;</span><br></pre></td></tr></table></figure>
 
 <ol start="3">
 <li>swiper是引入的组件，不属于所引入的组件，修改其组件内的样式用如下形式，swiper-pagination为swiper切换的圆点</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.swiper &gt;&gt;&gt; .swiper-pagination-bullet-active</span><br><span class="line">  background #fff</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.swiper &gt;&gt;&gt; .swiper-pagination-bullet-active</span><br><span class="line">background #fff</span><br></pre></td></tr></table></figure>
+
 <p>​    更新代码        </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &#39;change&#39;</span><br><span class="line">git push</span><br><span class="line">git checkout master</span><br><span class="line">git merge origin&#x2F;index-swiper &#x2F;&#x2F;合并分支</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
 
 <h5 id="13、图标区域逻辑实现"><a href="#13、图标区域逻辑实现" class="headerlink" title="13、图标区域逻辑实现"></a>13、图标区域逻辑实现</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &#39;add index-icons&#39;</span><br><span class="line">git push</span><br><span class="line">git checkout master</span><br><span class="line">git merge origin&#x2F;index-icons &#x2F;&#x2F;合并分支</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
 
 <p>ellipsis()函数的用法–创建mixins.styl文件–将需要的css代码直接复制过去创建函数–在需要用到的地方直接调用函数    </p>
-<h5 id="14、推荐组件开发"><a href="#14、推荐组件开发" class="headerlink" title="14、推荐组件开发"></a>14、推荐组件开发</h5><blockquote>
-<ol>
-<li><p>border-bottom 1像素边框，前边已经引入过，直接用就行</p>
-</li>
-<li><p>在父容器中加下列样式，解决子容器当一行文字过多时，不能显示省略号的问题</p>
-</li>
+<h5 id="14、推荐组件开发"><a href="#14、推荐组件开发" class="headerlink" title="14、推荐组件开发"></a>14、推荐组件开发</h5><ol>
+<li>border-bottom 1像素边框，前边已经引入过，直接用就行</li>
+<li>在父容器中加下列样式，解决子容器当一行文字过多时，不能显示省略号的问题</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">min-width 0</span><br></pre></td></tr></table></figure>
-</blockquote>
+
 <h5 id="15、开发周末游组件"><a href="#15、开发周末游组件" class="headerlink" title="15、开发周末游组件"></a>15、开发周末游组件</h5><p>复制Recommend组件</p>
-<h5 id="16、ajax请求数据"><a href="#16、ajax请求数据" class="headerlink" title="16、ajax请求数据"></a>16、ajax请求数据</h5><blockquote>
-<p>方法：</p>
-<p>fetch</p>
-<p>vue-resouce</p>
-<p>axios</p>
-<p>compu</p>
-</blockquote>
+<h5 id="16、ajax请求数据"><a href="#16、ajax请求数据" class="headerlink" title="16、ajax请求数据"></a>16、ajax请求数据</h5><p>方法：fetch、vue-resouce、axios、compu</p>
 <p>在config目录下的index.js文件中配置proxyTable: {}代理请求，比如：</p>
 <p><img src="/2020/02/24/travel/1581922985173.png" alt="1581922985173"></p>
 <p>在.gitignore配置，默认不会吧静态文件提交到git，如下：</p>
@@ -406,7 +397,7 @@ if (top &gt; 60) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/24/travel/" data-id="ck71bbet90005j4v22uafdm2p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/24/travel/" data-id="ck71d570q00055kv28jc5c5x1" class="article-share-link">Share</a>
       
       
     </footer>
