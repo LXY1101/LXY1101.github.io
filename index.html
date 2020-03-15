@@ -68,6 +68,42 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-vuex" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/15/vuex/" class="article-date">
+  <time datetime="2020-03-15T09:26:41.000Z" itemprop="datePublished">2020-03-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/15/vuex/">vuex</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/03/15/vuex/" data-id="ck7su5cdt0004xgv2hic1hix6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-js" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/03/08/js/" class="article-date">
@@ -457,7 +493,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/08/js/" data-id="ck7rbwrhd0007wgv263nxb40j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/08/js/" data-id="ck7su5cf40008xgv26qe29kfp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -496,7 +532,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/08/undefined/" data-id="ck7rbwrdw0004wgv29gy30soe" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/08/undefined/" data-id="ck7su5cdu0005xgv2dtvjhg7r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -668,8 +704,9 @@
 
 </li>
 </ul>
-<h5 id="26、使用keep-alive优化网页性能"><a href="#26、使用keep-alive优化网页性能" class="headerlink" title="26、使用keep-alive优化网页性能"></a>26、使用keep-alive优化网页性能</h5><h5 id="使用详情"><a href="#使用详情" class="headerlink" title="使用详情"></a>使用详情</h5><h6 id="1-keep-alive"><a href="#1-keep-alive" class="headerlink" title="(1)keep-alive"></a>(1)keep-alive</h6><p> keep-alive是Vue的内置组件，能在组件切换过程中将状态保留在内存中，防止重复渲染DOM。</p>
-<p>keepalive主要是缓存，当有些页面不需要来回请求数据，1次就可以的时候。我们用keepalive标签。这样保证了他只执行1次</p>
+<h5 id="26、使用keep-alive优化网页性能"><a href="#26、使用keep-alive优化网页性能" class="headerlink" title="26、使用keep-alive优化网页性能"></a>26、使用keep-alive优化网页性能</h5><h5 id="使用详情"><a href="#使用详情" class="headerlink" title="使用详情"></a>使用详情</h5><h6 id="1-keep-alive"><a href="#1-keep-alive" class="headerlink" title="(1)keep-alive"></a>(1)keep-alive</h6><p>keep-alive是Vue的内置组件，能在组件切换过程中将状态保留在内存中，防止重复渲染DOM。</p>
+<p>keep-alive主要是缓存，当有些页面不需要来回请求数据，1次就可以的时候。我们用keep-alive标签，避免数据重复请求。 </p>
+<p> 被包裹在keep-alive中的组件的状态将会被保留，例如我们将某个列表类组件内容滑动到第100条位置，那么我们在切换到一个组件后再次切换回到该组件，该组件的位置状态依旧会保持在第100条列表处 </p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">keep-alive</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">router-view</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">keep-alive</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h6 id="2-activated配合keepalive一起使用"><a href="#2-activated配合keepalive一起使用" class="headerlink" title="(2)activated配合keepalive一起使用"></a>(2)activated配合keepalive一起使用</h6><p>有的时候，我们有的页面需要重新刷新请求包，而有的页面不需要。所以我们就需要利用钩子函数来解决<br> mounted只执行一次。而activated只要页面切换加载组件就会执行一次，用它来解决执行多次</p>
@@ -820,7 +857,7 @@ if (top &gt; 60) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/24/travel/" data-id="ck7rbwrez0006wgv24jd27q1o" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/24/travel/" data-id="ck7su5ces0007xgv25kplhjp9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -950,7 +987,7 @@ if (top &gt; 60) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/24/sass/" data-id="ck7rbwrdp0002wgv2gtrobt3g" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/24/sass/" data-id="ck7su5cdq0002xgv2fznl3mej" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1047,7 +1084,7 @@ if (top &gt; 60) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/24/jQuery/" data-id="ck7rbwrdi0001wgv2975u907h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/24/jQuery/" data-id="ck7su5cdr0003xgv29h4lbfgy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1134,7 +1171,7 @@ if (top &gt; 60) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/24/AMD/" data-id="ck7rbwre90005wgv2561ndiba" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/24/AMD/" data-id="ck7su5ceq0006xgv273eo83c8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -2703,7 +2740,7 @@ if (top &gt; 60) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/24/h5/" data-id="ck7rbwrif0008wgv28ajzhply" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/24/h5/" data-id="ck7su5cfu0009xgv2d08n5vx0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -2793,7 +2830,7 @@ if (top &gt; 60) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/24/BFC/" data-id="ck7rbwr910000wgv26yz7enzv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/24/BFC/" data-id="ck7su5c930000xgv2a4dh4m5l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -2996,7 +3033,7 @@ if (top &gt; 60) {
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/24/bootstrap/" data-id="ck7rbwrdt0003wgv2h0st0k0b" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/02/24/bootstrap/" data-id="ck7su5cdo0001xgv22oto0br6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -3037,6 +3074,10 @@ if (top &gt; 60) {
       <ul>
         
           <li>
+            <a href="/2020/03/15/vuex/">vuex</a>
+          </li>
+        
+          <li>
             <a href="/2020/03/08/js/">js</a>
           </li>
         
@@ -3050,10 +3091,6 @@ if (top &gt; 60) {
         
           <li>
             <a href="/2020/02/24/sass/">sass</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/24/jQuery/">jQuery语法</a>
           </li>
         
       </ul>
