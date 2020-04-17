@@ -110,6 +110,32 @@
   </entry>
   
   <entry>
+    <title>正则表达式</title>
+    <link href="http://yoursite.com/2020/02/24/RE/"/>
+    <id>http://yoursite.com/2020/02/24/RE/</id>
+    <published>2020-02-24T08:52:46.000Z</published>
+    <updated>2020-04-17T14:50:18.895Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt; 正则表达式是由普通字符（例如字符 a 到 z）以及特殊字符（称为”元字符”）组成的文字模式。模式描述在搜索文本时要匹配的一个或多个字符串。 &lt;/p&gt;
+&lt;h2 id=&quot;一、部分元字符&quot;&gt;&lt;a href=&quot;#一、部分元字符&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="正则表达式" scheme="http://yoursite.com/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>sass</title>
     <link href="http://yoursite.com/2020/02/24/sass/"/>
     <id>http://yoursite.com/2020/02/24/sass/</id>
