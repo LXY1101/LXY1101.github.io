@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-15T09:30:42.067Z</updated>
+  <updated>2020-04-17T18:17:24.087Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,67 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>about me</title>
+    <link href="http://yoursite.com/2020/04/18/about/"/>
+    <id>http://yoursite.com/2020/04/18/about/</id>
+    <published>2020-04-17T18:01:07.000Z</published>
+    <updated>2020-04-17T18:17:24.087Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;姓名：Lai Xue Yun&lt;/p&gt;
+&lt;p&gt;微信：yun139279&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2020/04/18/about/1.jpg&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>trip</title>
+    <link href="http://yoursite.com/2020/04/18/trip/"/>
+    <id>http://yoursite.com/2020/04/18/trip/</id>
+    <published>2020-04-17T16:32:29.000Z</published>
+    <updated>2020-04-17T17:20:55.372Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5 id=&quot;芜湖大剧院&quot;&gt;&lt;a href=&quot;#芜湖大剧院&quot; class=&quot;headerlink&quot; title=&quot;芜湖大剧院&quot;&gt;&lt;/a&gt;芜湖大剧院&lt;/h5&gt;&lt;p&gt; 芜湖大剧院外形像“大贝壳” ，是芜湖人民的艺术充电站呢
+        
+      
+    
+    </summary>
+    
+    
+      <category term="旅行" scheme="http://yoursite.com/categories/%E6%97%85%E8%A1%8C/"/>
+    
+    
+      <category term="旅行" scheme="http://yoursite.com/tags/%E6%97%85%E8%A1%8C/"/>
+    
+      <category term="国内" scheme="http://yoursite.com/tags/%E5%9B%BD%E5%86%85/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Vuex入门</title>
     <link href="http://yoursite.com/2020/03/15/vuex/"/>
     <id>http://yoursite.com/2020/03/15/vuex/</id>
     <published>2020-03-15T09:26:41.000Z</published>
-    <updated>2020-03-15T09:30:42.067Z</updated>
+    <updated>2020-04-17T16:11:27.620Z</updated>
     
     <summary type="html">
     
@@ -36,6 +92,10 @@
     </summary>
     
     
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -44,7 +104,7 @@
     <link href="http://yoursite.com/2020/03/08/js/"/>
     <id>http://yoursite.com/2020/03/08/js/</id>
     <published>2020-03-08T12:07:51.000Z</published>
-    <updated>2020-03-14T08:06:14.334Z</updated>
+    <updated>2020-04-17T16:10:21.551Z</updated>
     
     <summary type="html">
     
@@ -59,6 +119,10 @@
     </summary>
     
     
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -67,7 +131,7 @@
     <link href="http://yoursite.com/2020/03/08/undefined/"/>
     <id>http://yoursite.com/2020/03/08/undefined/</id>
     <published>2020-03-08T12:07:24.000Z</published>
-    <updated>2020-03-08T12:09:21.197Z</updated>
+    <updated>2020-04-17T16:11:03.494Z</updated>
     
     <summary type="html">
     
@@ -83,6 +147,10 @@
     </summary>
     
     
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -91,7 +159,7 @@
     <link href="http://yoursite.com/2020/02/24/travel/"/>
     <id>http://yoursite.com/2020/02/24/travel/</id>
     <published>2020-02-24T09:10:16.000Z</published>
-    <updated>2020-03-14T12:45:19.857Z</updated>
+    <updated>2020-04-17T16:10:53.128Z</updated>
     
     <summary type="html">
     
@@ -106,6 +174,10 @@
     </summary>
     
     
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -114,7 +186,7 @@
     <link href="http://yoursite.com/2020/02/24/RE/"/>
     <id>http://yoursite.com/2020/02/24/RE/</id>
     <published>2020-02-24T08:52:46.000Z</published>
-    <updated>2020-04-17T14:50:18.895Z</updated>
+    <updated>2020-04-17T16:10:31.225Z</updated>
     
     <summary type="html">
     
@@ -130,8 +202,10 @@
     </summary>
     
     
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="正则表达式" scheme="http://yoursite.com/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+      <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -140,7 +214,7 @@
     <link href="http://yoursite.com/2020/02/24/sass/"/>
     <id>http://yoursite.com/2020/02/24/sass/</id>
     <published>2020-02-24T08:50:25.000Z</published>
-    <updated>2020-02-24T08:51:59.663Z</updated>
+    <updated>2020-04-17T16:10:39.611Z</updated>
     
     <summary type="html">
     
@@ -158,6 +232,10 @@
     </summary>
     
     
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -166,7 +244,7 @@
     <link href="http://yoursite.com/2020/02/24/jQuery/"/>
     <id>http://yoursite.com/2020/02/24/jQuery/</id>
     <published>2020-02-24T08:49:10.000Z</published>
-    <updated>2020-02-24T08:49:49.116Z</updated>
+    <updated>2020-04-17T16:10:13.834Z</updated>
     
     <summary type="html">
     
@@ -184,6 +262,10 @@
     </summary>
     
     
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -192,7 +274,7 @@
     <link href="http://yoursite.com/2020/02/24/AMD/"/>
     <id>http://yoursite.com/2020/02/24/AMD/</id>
     <published>2020-02-24T08:46:13.000Z</published>
-    <updated>2020-02-27T08:16:26.340Z</updated>
+    <updated>2020-04-17T16:09:33.361Z</updated>
     
     <summary type="html">
     
@@ -207,6 +289,10 @@
     </summary>
     
     
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -215,7 +301,7 @@
     <link href="http://yoursite.com/2020/02/24/h5/"/>
     <id>http://yoursite.com/2020/02/24/h5/</id>
     <published>2020-02-24T07:27:35.000Z</published>
-    <updated>2020-02-24T08:36:54.907Z</updated>
+    <updated>2020-04-17T16:10:04.263Z</updated>
     
     <summary type="html">
     
@@ -230,6 +316,10 @@
     </summary>
     
     
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -238,7 +328,7 @@
     <link href="http://yoursite.com/2020/02/24/BFC/"/>
     <id>http://yoursite.com/2020/02/24/BFC/</id>
     <published>2020-02-24T06:54:30.000Z</published>
-    <updated>2020-02-24T07:05:12.669Z</updated>
+    <updated>2020-04-17T16:09:46.197Z</updated>
     
     <summary type="html">
     
@@ -254,6 +344,10 @@
     </summary>
     
     
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -262,7 +356,7 @@
     <link href="http://yoursite.com/2020/02/24/bootstrap/"/>
     <id>http://yoursite.com/2020/02/24/bootstrap/</id>
     <published>2020-02-24T04:04:07.000Z</published>
-    <updated>2020-02-24T06:53:56.011Z</updated>
+    <updated>2020-04-17T16:09:55.669Z</updated>
     
     <summary type="html">
     
@@ -277,6 +371,10 @@
     </summary>
     
     
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   

@@ -1,6 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>about me</title>
+    <url>/2020/04/18/about/</url>
+    <content><![CDATA[<p>姓名：Lai Xue Yun</p>
+<p>微信：yun139279</p>
+<p><img src="/2020/04/18/about/1.jpg" alt></p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>trip</title>
+    <url>/2020/04/18/trip/</url>
+    <content><![CDATA[<h5 id="芜湖大剧院"><a href="#芜湖大剧院" class="headerlink" title="芜湖大剧院"></a>芜湖大剧院</h5><p> 芜湖大剧院外形像“大贝壳” ，是芜湖人民的艺术充电站呢 。</p>
+<p>以为会很多人，没想到去的时候大门都关着了。也许是刚好下雨天吧，便更没人了。</p>
+<h5 id><a href="#" class="headerlink" title></a><img src="/2020/04/18/trip/8.jpg" alt></h5><h5 id="安徽芜湖天主教堂"><a href="#安徽芜湖天主教堂" class="headerlink" title="安徽芜湖天主教堂"></a>安徽芜湖天主教堂</h5><p>1887年由法国人设计监造，教堂为砖木石混结构 。</p>
+<p>很安静，和谐的地方。</p>
+<p><img src="/2020/04/18/trip/1.jpg" alt></p>
+<h5 id="城市街道"><a href="#城市街道" class="headerlink" title="城市街道"></a>城市街道</h5><p><img src="/2020/04/18/trip/7.jpg" alt></p>
+<h5 id="芜湖滨江公园"><a href="#芜湖滨江公园" class="headerlink" title="芜湖滨江公园"></a>芜湖滨江公园</h5><p>长江沿岸的滨江公园。</p>
+<p>江景、园景、城景……在滨江公园都能尽收眼底。 </p>
+<p>雨天的滨江公园，江水都涨上岸了。</p>
+<p><img src="/2020/04/18/trip/3.jpg" alt></p>
+<p>雨水像汗水一样流淌</p>
+<p><img src="/2020/04/18/trip/5.jpg" alt></p>
+<p><img src="/2020/04/18/trip/4.jpg" alt></p>
+<p>高铁上的风景也很美</p>
+<p><img src="/2020/04/18/trip/10.jpg" alt></p>
+<p><img src="/2020/04/18/trip/11.jpg" alt></p>
+<p><img src="/2020/04/18/trip/9.jpg" alt></p>
+<p><img src="/2020/04/18/trip/12.jpg" alt></p>
+]]></content>
+      <categories>
+        <category>旅行</category>
+      </categories>
+      <tags>
+        <tag>旅行</tag>
+        <tag>国内</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vuex入门</title>
     <url>/2020/03/15/vuex/</url>
     <content><![CDATA[<h4 id="Vuex是什么？"><a href="#Vuex是什么？" class="headerlink" title="Vuex是什么？"></a>Vuex是什么？</h4><p>Vuex 是一个专为 Vue.js 应用程序开发的<strong>状态管理模式</strong>。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。 </p>
@@ -88,6 +129,12 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;state.js</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  count: 0</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;mutations</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">   increment (state) &#123;</span><br><span class="line">      state.count++</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+      </tags>
   </entry>
   <entry>
     <title>js</title>
@@ -456,6 +503,12 @@
 <li>最终都没有找到的话，我们认为该对象并没有该属性，如果获取该属性的值：undefined</li>
 </ol>
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+      </tags>
   </entry>
   <entry>
     <title>什么是undefined数据类型？</title>
@@ -464,6 +517,12 @@
 <p>//2、一个变量声明了，并且赋值了一个undefined的值<br>var c= undefined;<br>console.log(c); //c也是一个undefined类型的值</p>
 <p>//3、一个对象中，获取某个不存在的属性，值也是undefined<br>var d={};<br>console.log(d.age); //由于d对象没有age属性，值：undefined</p>
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+      </tags>
   </entry>
   <entry>
     <title>travel</title>
@@ -758,6 +817,12 @@ if (top &gt; 60) {
 <p>  @touchstart.prevent=”handleTouchStart”//prevent阻止touchstart默认行为</p>
 <p>  ```</p>
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+      </tags>
   </entry>
   <entry>
     <title>正则表达式</title>
@@ -1156,8 +1221,11 @@ if (top &gt; 60) {
 
 <p> 以一个可选的负号 (<strong>[-]?</strong>) 开头 (<strong>^</strong>)、跟着1个或更多的数字(<strong>[0-9]+</strong>)、和一个小数点(<strong>.</strong>)再跟上1个或多个数字<strong>([0-9]+</strong>)，并且后面没有其他任何东西(<strong>$</strong>)。 </p>
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
       <tags>
-        <tag>正则表达式</tag>
+        <tag>学习笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -1258,6 +1326,12 @@ if (top &gt; 60) {
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@function double($n) &#123;</span><br><span class="line">　　　　@return $n * 2;</span><br><span class="line">　　&#125;</span><br><span class="line"></span><br><span class="line">　　#sidebar &#123;</span><br><span class="line">　　　　width: double(5px);</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+      </tags>
   </entry>
   <entry>
     <title>jQuery语法</title>
@@ -1324,6 +1398,12 @@ if (top &gt; 60) {
 </tr>
 </tbody></table>
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+      </tags>
   </entry>
   <entry>
     <title>模块化-AMD</title>
@@ -1380,6 +1460,12 @@ if (top &gt; 60) {
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;product&#x2F;add.js</span><br><span class="line">define([],function()&#123;</span><br><span class="line"></span><br><span class="line">    return function()&#123;</span><br><span class="line"></span><br><span class="line">        console.log(&#39;商品增加的功能&#39;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+      </tags>
   </entry>
   <entry>
     <title>h5</title>
@@ -2918,6 +3004,12 @@ if (top &gt; 60) {
 </li>
 </ul>
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+      </tags>
   </entry>
   <entry>
     <title>BFC渲染机制</title>
@@ -2977,6 +3069,12 @@ if (top &gt; 60) {
 <p>总结</p>
 <p>因为<code>BFC</code>内部的元素和外部的元素绝对不会互相影响，因此， 当<code>BFC</code>外部存在浮动时，它不应该影响<code>BFC</code>内部Box的布局，<code>BFC</code>会通过变窄，而不与浮动有重叠。同样的，当<code>BFC</code>内部有浮动时，为了不影响外部元素的布局，<code>BFC</code>计算高度时会包括浮动的高度。避免margin重叠也是这样的一个道理。</p>
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+      </tags>
   </entry>
   <entry>
     <title>响应式开发</title>
@@ -3149,5 +3247,11 @@ if (top &gt; 60) {
 <p>​                </p>
 <p>​        </p>
 ]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+      </tags>
   </entry>
 </search>
