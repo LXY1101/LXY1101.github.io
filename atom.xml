@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>云</title>
+  
+  <subtitle>个人博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-03-15T09:30:42.067Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Xue Yun</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vuex入门</title>
+    <link href="http://yoursite.com/2020/03/15/vuex/"/>
+    <id>http://yoursite.com/2020/03/15/vuex/</id>
+    <published>2020-03-15T09:26:41.000Z</published>
+    <updated>2020-03-15T09:30:42.067Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;Vuex是什么？&quot;&gt;&lt;a href=&quot;#Vuex是什么？&quot; class=&quot;headerlink&quot; title=&quot;Vuex是什么？&quot;&gt;&lt;/a&gt;Vuex是什么？&lt;/h4&gt;&lt;p&gt;Vuex 是一个专为 Vue.js
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>js</title>
+    <link href="http://yoursite.com/2020/03/08/js/"/>
+    <id>http://yoursite.com/2020/03/08/js/</id>
+    <published>2020-03-08T12:07:51.000Z</published>
+    <updated>2020-03-14T08:06:14.334Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;JS高级&quot;&gt;&lt;a href=&quot;#JS高级&quot; class=&quot;headerlink&quot; title=&quot;JS高级&quot;&gt;&lt;/a&gt;JS高级&lt;/h1&gt;&lt;h2 id=&quot;JS基本介绍&quot;&gt;&lt;a href=&quot;#JS基本介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>什么是undefined数据类型？</title>
+    <link href="http://yoursite.com/2020/03/08/undefined/"/>
+    <id>http://yoursite.com/2020/03/08/undefined/</id>
+    <published>2020-03-08T12:07:24.000Z</published>
+    <updated>2020-03-08T12:09:21.197Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;//1、一个变量声明了，但是没有赋值，值默认为&lt;br&gt;undefined var b;&lt;br&gt;console.log(b); //b就是一个undefined类型的值&lt;/p&gt;
+&lt;p&gt;//2、一个变量声明了，并且赋值了一个undefined的值&lt;br&gt;var c=
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>travel</title>
+    <link href="http://yoursite.com/2020/02/24/travel/"/>
+    <id>http://yoursite.com/2020/02/24/travel/</id>
+    <published>2020-02-24T09:10:16.000Z</published>
+    <updated>2020-03-14T12:45:19.857Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5 id=&quot;1、安装git，vue&quot;&gt;&lt;a href=&quot;#1、安装git，vue&quot; class=&quot;headerlink&quot; title=&quot;1、安装git，vue&quot;&gt;&lt;/a&gt;1、安装git，vue&lt;/h5&gt;&lt;h5 id=&quot;2、注册码云账号&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>sass</title>
+    <link href="http://yoursite.com/2020/02/24/sass/"/>
+    <id>http://yoursite.com/2020/02/24/sass/</id>
+    <published>2020-02-24T08:50:25.000Z</published>
+    <updated>2020-02-24T08:51:59.663Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;一、sass基本用法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.1 变量&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;SASS允许使用变量，所有变量以$开头。&lt;/p&gt;
+&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>jQuery语法</title>
+    <link href="http://yoursite.com/2020/02/24/jQuery/"/>
+    <id>http://yoursite.com/2020/02/24/jQuery/</id>
+    <published>2020-02-24T08:49:10.000Z</published>
+    <updated>2020-02-24T08:49:49.116Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;jQuery 语法是通过选取 HTML 元素，并对选取的元素执行某些操作。&lt;/p&gt;
+&lt;p&gt;基础语法： &lt;strong&gt;$(*selector*).*action*()&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;美元符号定义
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>模块化-AMD</title>
+    <link href="http://yoursite.com/2020/02/24/AMD/"/>
+    <id>http://yoursite.com/2020/02/24/AMD/</id>
+    <published>2020-02-24T08:46:13.000Z</published>
+    <updated>2020-02-27T08:16:26.340Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;随着web应用越来越复杂，嵌入的javascript代码越来越复杂，模块化编程就变成了必须。所以就有了后来的Dojo工具包和google的Closure库支持的模块系统。还有两个非常通用的标准规范，CommomJS和AMD。CommomJS规范的API是同步加载模块的，而实
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>h5</title>
+    <link href="http://yoursite.com/2020/02/24/h5/"/>
+    <id>http://yoursite.com/2020/02/24/h5/</id>
+    <published>2020-02-24T07:27:35.000Z</published>
+    <updated>2020-02-24T08:36:54.907Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;一、Html5概要&quot;&gt;&lt;a href=&quot;#一、Html5概要&quot; class=&quot;headerlink&quot; title=&quot;一、Html5概要&quot;&gt;&lt;/a&gt;一、Html5概要&lt;/h4&gt;&lt;h5 id=&quot;（一）h5-与-h4的区别&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>BFC渲染机制</title>
+    <link href="http://yoursite.com/2020/02/24/BFC/"/>
+    <id>http://yoursite.com/2020/02/24/BFC/</id>
+    <published>2020-02-24T06:54:30.000Z</published>
+    <updated>2020-02-24T07:05:12.669Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt; &lt;strong&gt;1.BFC(block formatting context):块级格式化上下文&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; W3C CSS2.1
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>响应式开发</title>
+    <link href="http://yoursite.com/2020/02/24/bootstrap/"/>
+    <id>http://yoursite.com/2020/02/24/bootstrap/</id>
+    <published>2020-02-24T04:04:07.000Z</published>
+    <updated>2020-02-24T06:53:56.011Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;一、网页布局方式&quot;&gt;&lt;a href=&quot;#一、网页布局方式&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
