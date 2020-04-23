@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-17T18:17:24.087Z</updated>
+  <updated>2020-04-23T03:10:10.812Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>webpack</title>
+    <link href="http://yoursite.com/2020/04/23/webpack/"/>
+    <id>http://yoursite.com/2020/04/23/webpack/</id>
+    <published>2020-04-23T03:08:45.000Z</published>
+    <updated>2020-04-23T03:10:10.812Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;官方文档： &lt;a href=&quot;https://www.webpackjs.com/guides/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.webpackjs.com/guides/&lt;/a&gt; &lt;/p&gt;
+&lt;h5
+        
+      
+    
+    </summary>
+    
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>about me</title>
