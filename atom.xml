@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-15T04:01:18.411Z</updated>
+  <updated>2020-05-15T04:12:34.017Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,18 +21,15 @@
     <link href="http://yoursite.com/2020/04/23/webpack/"/>
     <id>http://yoursite.com/2020/04/23/webpack/</id>
     <published>2020-04-23T03:08:45.000Z</published>
-    <updated>2020-05-15T04:01:18.411Z</updated>
+    <updated>2020-05-15T04:12:34.017Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;官方文档： &lt;a href=&quot;https://www.webpackjs.com/guides/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.webpackjs.com/guides/&lt;/a&gt; &lt;/p&gt;
-&lt;h5
-        
-      
+      &lt;p&gt;官方文档： &lt;a href=&quot;https://www.webpackjs.com/guides/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.webpackjs.com/guides/&lt;/a&gt; &lt;/p&gt;
+&lt;h5 id=&quot;webpack项目构建步骤：&quot;&gt;&lt;a href=&quot;#webpack项目构建步骤：&quot; class=&quot;headerlink&quot; title=&quot;webpack项目构建步骤：&quot;&gt;&lt;/a&gt;webpack项目构建步骤：&lt;/h5&gt;&lt;p&gt;  新建一个空的练习文件夹，在上述练习文件夹中，使用&lt;code&gt;npm init&lt;/code&gt;命令自动创建package.json文件 &lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm init&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt; 安装Webpack&lt;/p&gt;
     
     </summary>
     
