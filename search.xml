@@ -163,7 +163,10 @@
     <url>/2020/04/18/trip/</url>
     <content><![CDATA[<h5 id="芜湖大剧院"><a href="#芜湖大剧院" class="headerlink" title="芜湖大剧院"></a>芜湖大剧院</h5><p> 芜湖大剧院外形像“大贝壳” ，是芜湖人民的艺术充电站呢 。</p>
 <p>以为会很多人，没想到去的时候大门都关着了。也许是刚好下雨天吧，便更没人了。</p>
-<h5 id><a href="#" class="headerlink" title></a><img src="/2020/04/18/trip/8.jpg" alt></h5><h5 id="安徽芜湖天主教堂"><a href="#安徽芜湖天主教堂" class="headerlink" title="安徽芜湖天主教堂"></a>安徽芜湖天主教堂</h5><p>1887年由法国人设计监造，教堂为砖木石混结构 。</p>
+<h5 id><a href="#" class="headerlink" title></a><img src="/2020/04/18/trip/8.jpg" alt></h5><a id="more"></a>
+
+
+<h5 id="安徽芜湖天主教堂"><a href="#安徽芜湖天主教堂" class="headerlink" title="安徽芜湖天主教堂"></a>安徽芜湖天主教堂</h5><p>1887年由法国人设计监造，教堂为砖木石混结构 。</p>
 <p>很安静，和谐的地方。</p>
 <p><img src="/2020/04/18/trip/1.jpg" alt></p>
 <h5 id="城市街道"><a href="#城市街道" class="headerlink" title="城市街道"></a>城市街道</h5><p><img src="/2020/04/18/trip/7.jpg" alt></p>
@@ -194,6 +197,7 @@
     <content><![CDATA[<h4 id="Vuex是什么？"><a href="#Vuex是什么？" class="headerlink" title="Vuex是什么？"></a>Vuex是什么？</h4><p>Vuex 是一个专为 Vue.js 应用程序开发的<strong>状态管理模式</strong>。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。 </p>
 <h4 id="Vuex解决了什么问题？"><a href="#Vuex解决了什么问题？" class="headerlink" title="Vuex解决了什么问题？"></a>Vuex解决了什么问题？</h4><p> 当<strong>多个组件共享状态</strong>时， 兄弟组件间或父子组件间的状态传递会变得相当繁琐。Vuex就是把组件的共享状态抽取出来，独立管理状态。从而使代码更加结构化和易于维护。</p>
 <h4 id="Vuex工作流程示意图："><a href="#Vuex工作流程示意图：" class="headerlink" title="Vuex工作流程示意图："></a>Vuex工作流程示意图：</h4><p> <img src="/2020/03/15/vuex/vuex.png" alt="vuex"> </p>
+<a id="more"></a>
 <h4 id="Vuex核心概念"><a href="#Vuex核心概念" class="headerlink" title="Vuex核心概念"></a>Vuex核心概念</h4><p>State 、Getter、Mutation、Action、Mutation</p>
 <h4 id="开始使用Vuex"><a href="#开始使用Vuex" class="headerlink" title="开始使用Vuex"></a>开始使用Vuex</h4><p>安装Vuex</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install vuex --save</span><br></pre></td></tr></table></figure>
@@ -287,14 +291,17 @@
     <title>js</title>
     <url>/2020/03/08/js/</url>
     <content><![CDATA[<h1 id="JS高级"><a href="#JS高级" class="headerlink" title="JS高级"></a>JS高级</h1><h2 id="JS基本介绍"><a href="#JS基本介绍" class="headerlink" title="JS基本介绍"></a>JS基本介绍</h2><ul>
-<li>JS的用途：Javascript可以实现浏览器端、服务器端(nodejs)相关应用。</li>
-<li>浏览器端JS由以下三个部分组成：<ul>
+<li><p>JS的用途：Javascript可以实现浏览器端、服务器端(nodejs)相关应用。</p>
+</li>
+<li><p>浏览器端JS由以下三个部分组成：</p>
+<ul>
 <li>ECMAScript：基础语法(数据类型、运算符、函数。。。)</li>
 <li>BOM(浏览器对象模型)：window、location、history、navigator。。。</li>
 <li>DOM(文档对象模型)：div、p、span。。。</li>
 </ul>
 </li>
-<li>ECMAScript又名es，有以下重大版本：<ul>
+<li><p>ECMAScript又名es，有以下重大版本：</p>
+<ul>
 <li>旧时代：<ul>
 <li>es1.0。。。es3.1</li>
 </ul>
@@ -302,15 +309,16 @@
 <li>新时代：<ul>
 <li>es5</li>
 <li>es6(es2015)</li>
-<li>es7(es2016)、es8(es2017)</li>
+<li>es7(es2016)、es8(es2017)<a id="more"></a>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2></li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
-<li>基本数据类型——值类型：数字、字符串、布尔值、null、undefined</li>
-<li>复杂数据类型——引用类型：对象、数组、函数、正则表达式、Date</li>
+<li><p>基本数据类型——值类型：数字、字符串、布尔值、null、undefined</p>
+</li>
+<li><p>复杂数据类型——引用类型：对象、数组、函数、正则表达式、Date</p>
+</li>
 </ul>
 <h2 id="对象的基本使用"><a href="#对象的基本使用" class="headerlink" title="对象的基本使用"></a>对象的基本使用</h2><h3 id="创建一个对象"><a href="#创建一个对象" class="headerlink" title="创建一个对象"></a>创建一个对象</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> student=&#123; </span><br><span class="line">    name:<span class="string">"李白"</span> , <span class="comment">//student有一个name属性，值为"李白"</span></span><br><span class="line">    grade:<span class="string">"初一"</span> ,</span><br><span class="line">    <span class="comment">//a、student有一个say属性，值为一个函数</span></span><br><span class="line">    <span class="comment">//b、student有一个say方法</span></span><br><span class="line">    say:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"你好"</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">    run:<span class="function"><span class="keyword">function</span>(<span class="params">speed</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"正在以"</span>+speed+<span class="string">"米/秒的速度奔跑"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -675,6 +683,7 @@
     <title>travel</title>
     <url>/2020/02/24/travel/</url>
     <content><![CDATA[<h5 id="1、安装git，vue"><a href="#1、安装git，vue" class="headerlink" title="1、安装git，vue"></a>1、安装git，vue</h5><h5 id="2、注册码云账号"><a href="#2、注册码云账号" class="headerlink" title="2、注册码云账号"></a>2、注册码云账号</h5><h5 id="3、创建仓库"><a href="#3、创建仓库" class="headerlink" title="3、创建仓库"></a>3、创建仓库</h5><p><img src="/2020/02/24/travel/1581583584192.png" alt="1581583584192"></p>
+<a id="more"></a>
 <h5 id="4、生成SSH公钥"><a href="#4、生成SSH公钥" class="headerlink" title="4、生成SSH公钥"></a>4、生成SSH公钥</h5><h5 id="5、复制SSH地址"><a href="#5、复制SSH地址" class="headerlink" title="5、复制SSH地址"></a>5、复制SSH地址</h5><p><img src="/2020/02/24/travel/1581584287375.png" alt="1581584287375"></p>
 <h5 id="6、将线上仓库的代码克隆到本地"><a href="#6、将线上仓库的代码克隆到本地" class="headerlink" title="6、将线上仓库的代码克隆到本地"></a>6、将线上仓库的代码克隆到本地</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone git@gitee.com:xueyun1314&#x2F;travel.git</span><br></pre></td></tr></table></figure>
 
@@ -975,6 +984,7 @@ if (top &gt; 60) {
     <title>正则表达式</title>
     <url>/2020/02/24/RE/</url>
     <content><![CDATA[<p> 正则表达式是由普通字符（例如字符 a 到 z）以及特殊字符（称为”元字符”）组成的文字模式。模式描述在搜索文本时要匹配的一个或多个字符串。 </p>
+<a id="more"></a>
 <h2 id="一、部分元字符"><a href="#一、部分元字符" class="headerlink" title="一、部分元字符"></a>一、部分元字符</h2><h4 id="非打印字符"><a href="#非打印字符" class="headerlink" title="非打印字符"></a>非打印字符</h4><table>
 <thead>
 <tr>
@@ -1384,6 +1394,7 @@ if (top &gt; 60) {
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$blue : #1875e7;　</span><br><span class="line"></span><br><span class="line">div &#123;</span><br><span class="line">	color : $blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>如果变量需要镶嵌在字符串之中，就必须需要写在#{}之中。</p>
+<a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$side : left;</span><br><span class="line"></span><br><span class="line">.rounded &#123;</span><br><span class="line">	border-#&#123;$side&#125;-radius: 5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>1.2 计算功能</strong></p>
@@ -1503,7 +1514,7 @@ if (top &gt; 60) {
 
 <p> 简洁写法（与以上写法效果相同）: </p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$(function()&#123;</span><br><span class="line"> </span><br><span class="line">   &#x2F;&#x2F; 开始写 jQuery 代码...</span><br><span class="line"> </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
+<a id="more"></a>
 <h1 id="jQuery-事件"><a href="#jQuery-事件" class="headerlink" title="jQuery 事件"></a>jQuery 事件</h1><table>
 <thead>
 <tr>
@@ -1556,6 +1567,7 @@ if (top &gt; 60) {
     <title>模块化-AMD</title>
     <url>/2020/02/24/AMD/</url>
     <content><![CDATA[<p>随着web应用越来越复杂，嵌入的javascript代码越来越复杂，模块化编程就变成了必须。所以就有了后来的Dojo工具包和google的Closure库支持的模块系统。还有两个非常通用的标准规范，CommomJS和AMD。CommomJS规范的API是同步加载模块的，而实现AMD规范的API则是异步加载模块。所以理论上说，AMD规范的非阻塞加载更加适合浏览器端。而RequeireJS就是AMD规范的最好实现。在这里只讲述下AMD。</p>
+<a id="more"></a>
 <blockquote>
 <p>RequeireJS是一个javascript模块加载器。它适合在浏览器中使用，有可以用在其他脚本环境。使用RequireJS加载模块化脚本将提高代码的加载速度和质量。</p>
 </blockquote>
@@ -1623,7 +1635,7 @@ if (top &gt; 60) {
 4:`&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;&gt;` </code></pre></li>
 <li><p>编码设置</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">&lt;meta http-equiv&#x3D;&quot;Content-Type&quot; content&#x3D;&quot;text&#x2F;html; charset&#x3D;UTF-8&quot;&gt;</span><br></pre></td></tr></table></figure>
-</li>
+<a id="more"></a></li>
 <li><p>可以直接嵌入MathML和SVG</p>
 </li>
 <li><p>新的解析规范</p>
@@ -3163,6 +3175,7 @@ if (top &gt; 60) {
     <url>/2020/02/24/BFC/</url>
     <content><![CDATA[<p> <strong>1.BFC(block formatting context):块级格式化上下文</strong></p>
 <p> W3C CSS2.1 规范中的一个概念。它是页面中的一块渲染区域，并且有一套渲染规则，<strong>它决定了其子元素将如何定位，以及和其他元素的关系和相互作用</strong> 。</p>
+<a id="more"></a>
 <p><strong>2.渲染规则：</strong> </p>
 <p> 规则1：在BFC中元素垂直方向上的margin会重叠。</p>
 <p> 规则2：BFC内相当于一个独立的世界，里面的元素无论怎么变化都不会影响外面。</p>
@@ -3234,9 +3247,10 @@ if (top &gt; 60) {
 <li><p>栅格化布局：将网页宽度人为的划分成均等的长度，然后排版布局时则以这些均等的长度做为度量单位，通常利用百分比做为长度单位来划分成均等的长度。</p>
 </li>
 <li><p>响应式布局：通过检测设备信息，决定网页布局方式，即用户如果采用不同的设备访问同一个网页，有可能会看到不一样的内容，一般情况下是检测设备屏幕的宽度来实现。</p>
+<a id="more"></a>
+<p>注：以上几种布局方式并不是独立存在的，实际开发过程中往往是相互结合使用的。</p>
 </li>
 </ol>
-<p>注：以上几种布局方式并不是独立存在的，实际开发过程中往往是相互结合使用的。</p>
 <h4 id="二、响应式布局"><a href="#二、响应式布局" class="headerlink" title="二、响应式布局"></a>二、响应式布局</h4><p>Responsive design，意在实现不同屏幕分辨率的终端上浏览网页的不同展示方式。通过响应式设计能使网站在手机和平板电脑上有更好的浏览阅读体验。</p>
 <p><img src="/2020/02/24/bootstrap/wps1.jpg" alt="wps1"></p>
 <p>​    </p>

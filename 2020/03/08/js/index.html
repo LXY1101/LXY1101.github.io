@@ -109,14 +109,17 @@
 
       
       <h1 id="JS高级"><a href="#JS高级" class="headerlink" title="JS高级"></a>JS高级</h1><h2 id="JS基本介绍"><a href="#JS基本介绍" class="headerlink" title="JS基本介绍"></a>JS基本介绍</h2><ul>
-<li>JS的用途：Javascript可以实现浏览器端、服务器端(nodejs)相关应用。</li>
-<li>浏览器端JS由以下三个部分组成：<ul>
+<li><p>JS的用途：Javascript可以实现浏览器端、服务器端(nodejs)相关应用。</p>
+</li>
+<li><p>浏览器端JS由以下三个部分组成：</p>
+<ul>
 <li>ECMAScript：基础语法(数据类型、运算符、函数。。。)</li>
 <li>BOM(浏览器对象模型)：window、location、history、navigator。。。</li>
 <li>DOM(文档对象模型)：div、p、span。。。</li>
 </ul>
 </li>
-<li>ECMAScript又名es，有以下重大版本：<ul>
+<li><p>ECMAScript又名es，有以下重大版本：</p>
+<ul>
 <li>旧时代：<ul>
 <li>es1.0。。。es3.1</li>
 </ul>
@@ -124,15 +127,16 @@
 <li>新时代：<ul>
 <li>es5</li>
 <li>es6(es2015)</li>
-<li>es7(es2016)、es8(es2017)</li>
+<li>es7(es2016)、es8(es2017)<a id="more"></a>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2></li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
-<li>基本数据类型——值类型：数字、字符串、布尔值、null、undefined</li>
-<li>复杂数据类型——引用类型：对象、数组、函数、正则表达式、Date</li>
+<li><p>基本数据类型——值类型：数字、字符串、布尔值、null、undefined</p>
+</li>
+<li><p>复杂数据类型——引用类型：对象、数组、函数、正则表达式、Date</p>
+</li>
 </ul>
 <h2 id="对象的基本使用"><a href="#对象的基本使用" class="headerlink" title="对象的基本使用"></a>对象的基本使用</h2><h3 id="创建一个对象"><a href="#创建一个对象" class="headerlink" title="创建一个对象"></a>创建一个对象</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> student=&#123; </span><br><span class="line">    name:<span class="string">"李白"</span> , <span class="comment">//student有一个name属性，值为"李白"</span></span><br><span class="line">    grade:<span class="string">"初一"</span> ,</span><br><span class="line">    <span class="comment">//a、student有一个say属性，值为一个函数</span></span><br><span class="line">    <span class="comment">//b、student有一个say方法</span></span><br><span class="line">    say:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"你好"</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">    run:<span class="function"><span class="keyword">function</span>(<span class="params">speed</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"正在以"</span>+speed+<span class="string">"米/秒的速度奔跑"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
