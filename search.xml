@@ -6,8 +6,8 @@
     <content><![CDATA[<h5 id="网络协议分层"><a href="#网络协议分层" class="headerlink" title="网络协议分层"></a>网络协议分层</h5><p><img src="/2020/05/25/http/1589102984789.png" alt="1589102984789"></p>
 <a id="more"></a>
 
-<p><img src="/http/1589104451768.png" alt="1589104451768"></p>
-<h5 id="设置Access-Control-Allow-Origin请求头来支持跨域"><a href="#设置Access-Control-Allow-Origin请求头来支持跨域" class="headerlink" title="设置Access-Control-Allow-Origin请求头来支持跨域"></a>设置Access-Control-Allow-Origin请求头来支持跨域</h5><p><img src="/http/1589106745705.png" alt="1589106745705"></p>
+<p><img src="/2020/05/25/http/1589104451768.png" alt="1589104451768"></p>
+<h5 id="设置Access-Control-Allow-Origin请求头来支持跨域"><a href="#设置Access-Control-Allow-Origin请求头来支持跨域" class="headerlink" title="设置Access-Control-Allow-Origin请求头来支持跨域"></a>设置Access-Control-Allow-Origin请求头来支持跨域</h5><p><img src="/2020/05/25/http/1589106745705.png" alt="1589106745705"></p>
 <h5 id="跨域的限制："><a href="#跨域的限制：" class="headerlink" title="跨域的限制："></a>跨域的限制：</h5><ol>
 <li>跨域默认允许的请求方法：<strong>get、head、post</strong></li>
 </ol>
@@ -21,7 +21,7 @@
 <p>请求头的限制： <a href="https://fetch.spec.whatwg.org/#cors-safelisted-request-header" target="_blank" rel="noopener">https://fetch.spec.whatwg.org/#cors-safelisted-request-header</a> </p>
 <p><strong>accept</strong> 、 <strong>accept-language</strong> 、 <strong>content-languag</strong> 、 <strong>content-type</strong> </p>
 <h5 id="对于：当文件内容已经改变，但由于客户端请求的url不变，在缓存期限内客户端不会去重新发送请求，而是请求缓存，这样就导致无法加载到更新的内容"><a href="#对于：当文件内容已经改变，但由于客户端请求的url不变，在缓存期限内客户端不会去重新发送请求，而是请求缓存，这样就导致无法加载到更新的内容" class="headerlink" title="对于：当文件内容已经改变，但由于客户端请求的url不变，在缓存期限内客户端不会去重新发送请求，而是请求缓存，这样就导致无法加载到更新的内容"></a>对于：当文件内容已经改变，但由于客户端请求的url不变，在缓存期限内客户端不会去重新发送请求，而是请求缓存，这样就导致无法加载到更新的内容</h5><p>解决方案：可以在请求地址后面加一个hash值，当文件内容改变时，请求地址就会改变</p>
-<h5 id="资源验证："><a href="#资源验证：" class="headerlink" title="资源验证："></a>资源验证：</h5><p><img src="/http/1589127460211.png" alt="1589127460211"></p>
+<h5 id="资源验证："><a href="#资源验证：" class="headerlink" title="资源验证："></a>资源验证：</h5><p><img src="/2020/05/25/http/1589127460211.png" alt="1589127460211"></p>
 ]]></content>
       <categories>
         <category>学习</category>
