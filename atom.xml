@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-25T12:00:56.324Z</updated>
+  <updated>2020-08-02T02:45:43.507Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>事件委托</title>
+    <link href="http://yoursite.com/2020/08/02/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/"/>
+    <id>http://yoursite.com/2020/08/02/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98/</id>
+    <published>2020-08-02T02:42:30.000Z</published>
+    <updated>2020-08-02T02:45:43.507Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;事件委托&lt;/p&gt;
+&lt;p&gt;添加子节点，子节点也有事件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta
+        
+      
+    
+    </summary>
+    
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学习笔记" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>http协议</title>
